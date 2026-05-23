@@ -3,7 +3,8 @@
   "name": "SOC 2 Readiness",
   "shortDescription": "Prepare for SOC 2 Type 1 or Type 2 audits with controls, evidence workflows, and tool evaluations",
   "regulation": "SOC 2",
-  "status": "placeholder",
+  "status": "live",
+  "url": "https://soc2.johnboen.com",
   "order": 12,
   "category": "audit-framework"
 }

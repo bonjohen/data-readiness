@@ -5,7 +5,7 @@ depends_on: "Phase 04"
 goal: "The SOC 2 readiness site from c:\\projects\\soc2 is fully integrated into github/soc2/ as a standalone Astro site, with its manifest updated to live status so the hub discovers and links to it."
 source_pdr_sections: ["2.3", "6.1"]
 source_user_stories: ["US-003", "US-006", "US-008"]
-status: "open"
+status: "completed"
 ---
 
 # Phase 010: SOC 2 Topic Site Integration
@@ -313,12 +313,12 @@ dist/
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| E.1 | Open | | | Update `github/soc2/site.json` — set `status` to `live`, add `url: "https://soc2.johnboen.com"` |
-| E.2 | Open | | | Create `github/soc2/.github/workflows/deploy.yml` — GitHub Pages deployment (trigger on push to main, Node 20, npm ci in `github/soc2/`, astro build, upload dist, deploy pages) |
-| E.3 | Open | | | Rebuild hub site (`npx astro build` in `github/_hub/`): verify SOC 2 card shows green "Live" badge and links to `https://soc2.johnboen.com` |
-| E.4 | Open | | | Verify hub about page: SOC 2 row in regulation coverage table shows "Live" badge with clickable link |
-| E.5 | Open | | | Verify SOC 2 site build: `npx astro build` in `github/soc2/` completes < 30s, produces 9 pages + sitemap |
-| E.6 | Open | | | Verify cross-site consistency: both hub and SOC 2 site use same design tokens (color palette, typography, spacing), same skip-link pattern, same footer disclaimer style |
+| E.1 | Completed | 2026-05-23 07:41 PM | 2026-05-23 07:42 PM | Update `github/soc2/site.json` — set `status` to `live`, add `url: "https://soc2.johnboen.com"` |
+| E.2 | Completed | 2026-05-23 07:41 PM | 2026-05-23 07:42 PM | Create `github/soc2/.github/workflows/deploy.yml` — GitHub Pages deployment (trigger on push to main, Node 20, npm ci in `github/soc2/`, astro build, upload dist, deploy pages) |
+| E.3 | Completed | 2026-05-23 07:55 PM | 2026-05-23 07:56 PM | Rebuild hub site (`npx astro build` in `github/_hub/`): verify SOC 2 card shows green "Live" badge and links to `https://soc2.johnboen.com` |
+| E.4 | Completed | 2026-05-23 07:55 PM | 2026-05-23 07:56 PM | Verify hub about page: SOC 2 row in regulation coverage table shows "Live" badge with clickable link |
+| E.5 | Completed | 2026-05-23 07:55 PM | 2026-05-23 07:56 PM | Verify SOC 2 site build: `npx astro build` in `github/soc2/` completes < 30s, produces 9 pages + sitemap |
+| E.6 | Completed | 2026-05-23 07:55 PM | 2026-05-23 07:56 PM | Verify cross-site consistency: both hub and SOC 2 site use same design tokens (color palette, typography, spacing), same skip-link pattern, same footer disclaimer style |
 
 <details>
 <summary>Phase 010-E Context</summary>
@@ -358,10 +358,8 @@ After updating `site.json` to live, rebuilding the hub (`npx astro build` in `gi
 
 ### Phase 010-E Summary
 
-_To be filled after completion._
-
-- **Changes:** TBD
-- **Commit:** TBD
+- **Changes:** Updated `github/soc2/site.json` to `status: "live"` with `url: "https://soc2.johnboen.com"`. Created `github/soc2/.github/workflows/deploy.yml` for GitHub Pages deployment. Verified hub discovers SOC 2 with green "Live" badge and clickable link on both index and about pages. SOC 2 site builds 9 pages + sitemap in 908ms. Cross-site design consistency confirmed (shared design tokens, skip-link, footer disclaimer).
+- **Commit:** `Phase 010-E: Hub integration — SOC 2 live status, deploy workflow, verification`
 
 ---
 
