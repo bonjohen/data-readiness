@@ -23,13 +23,13 @@ Migrate the existing SOC 2 readiness site (`c:\projects\soc2`, GitHub: `@bonjohe
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| A.1 | Open | | | Create `github/soc2/package.json` — name `soc2-readiness`, type module, scripts (dev port 4333, build, preview), dependencies (astro ^5.8.0, @astrojs/sitemap ^3.7.2, sharp ^0.33.5) |
-| A.2 | Open | | | Create `github/soc2/astro.config.mjs` — site `https://soc2.johnboen.com`, base `/`, sitemap integration, server port 4333 |
-| A.3 | Open | | | Create `github/soc2/tsconfig.json` — extends `astro/tsconfigs/strict` |
-| A.4 | Open | | | Create `github/soc2/src/config.ts` — SITE constant: title `SOC 2 Readiness`, description, url `https://soc2.johnboen.com`, author `John Boen` |
-| A.5 | Open | | | Copy `github/_hub/src/styles/global.css` to `github/soc2/src/styles/global.css` (shared design tokens — identical baseline) |
-| A.6 | Open | | | Create `github/soc2/public/favicon.svg` (blue rounded-rect with checkmark, from reference) and `github/soc2/public/CNAME` (`soc2.johnboen.com`) |
-| A.7 | Open | | | Run `npm install` in `github/soc2/` and verify `npx astro build` succeeds (empty project, no pages yet) |
+| A.1 | Completed | 2026-05-23 07:33 PM | 2026-05-23 07:34 PM | Create `github/soc2/package.json` — name `soc2-readiness`, type module, scripts (dev port 4333, build, preview), dependencies (astro ^5.8.0, @astrojs/sitemap ^3.7.2, sharp ^0.33.5) |
+| A.2 | Completed | 2026-05-23 07:33 PM | 2026-05-23 07:34 PM | Create `github/soc2/astro.config.mjs` — site `https://soc2.johnboen.com`, base `/`, sitemap integration, server port 4333 |
+| A.3 | Completed | 2026-05-23 07:33 PM | 2026-05-23 07:34 PM | Create `github/soc2/tsconfig.json` — extends `astro/tsconfigs/strict` |
+| A.4 | Completed | 2026-05-23 07:33 PM | 2026-05-23 07:34 PM | Create `github/soc2/src/config.ts` — SITE constant: title `SOC 2 Readiness`, description, url `https://soc2.johnboen.com`, author `John Boen` |
+| A.5 | Completed | 2026-05-23 07:33 PM | 2026-05-23 07:34 PM | Copy `github/_hub/src/styles/global.css` to `github/soc2/src/styles/global.css` (shared design tokens — identical baseline) |
+| A.6 | Completed | 2026-05-23 07:33 PM | 2026-05-23 07:34 PM | Create `github/soc2/public/favicon.svg` (blue rounded-rect with checkmark, from reference) and `github/soc2/public/CNAME` (`soc2.johnboen.com`) |
+| A.7 | Completed | 2026-05-23 07:35 PM | 2026-05-23 07:35 PM | Run `npm install` in `github/soc2/` and verify `npx astro build` succeeds (empty project, no pages yet) |
 
 <details>
 <summary>Phase 010-A Context</summary>
@@ -56,10 +56,8 @@ Migrate the existing SOC 2 readiness site (`c:\projects\soc2`, GitHub: `@bonjohe
 
 ### Phase 010-A Summary
 
-_To be filled after completion._
-
-- **Changes:** TBD
-- **Commit:** TBD
+- **Changes:** Created `github/soc2/` Astro project scaffold with package.json, astro.config.mjs (port 4333, sitemap), tsconfig.json (strict), src/config.ts (SITE constant), src/styles/global.css (copied from hub), public/favicon.svg, public/CNAME. Installed npm packages. Verified empty build succeeds.
+- **Commit:** `Phase 010-A: SOC 2 project scaffold — Astro config, design tokens, public assets`
 
 ---
 
