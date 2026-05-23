@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import { discoverTopics } from '../data/discover-topics';
+
+const topics = discoverTopics();
+---
+<BaseLayout title="About" description="About the Data Readiness platform">
+  <section class="container about-page">
+    <h1>About Data Readiness</h1>
+
+    <div class="content">
+      <p>Data Readiness helps technology companies understand and prepare for regulatory compliance obligations. The platform covers 12 data regulation frameworks spanning privacy, security, governance, and audit requirements.</p>
+
+      <p>Each regulation topic has its own dedicated site with control domain breakdowns, evidence requirements, tool evaluations, and advisory service descriptions. Sites are designed for compliance professionals, security leads, and executive sponsors who need practical readiness guidance.</p>
+    </div>
+
+    <h2>Regulation Coverage</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Regulation</th>
+            <th>Category</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {topics.map((topic) => (
+            <tr>
+              <td>
+                {topic.status === 'live'
+                  ? <a href={topic.url}>{topic.name}</a>
+                  : topic.name
+                }
+              </td>
+              <td><span class="badge">{topic.category}</span></td>
+              <td>
+                {topic.status === 'live'
+                  ? <span class="badge-live">Live</span>
+                  : <span class="badge-coming-soon">Coming Soon</span>
+                }
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>How Each Topic Site Works</h2>
+    <div class="content">
+      <p>Every topic site follows the same structure:</p>
+      <ul>
+        <li><strong>Controls & Evidence</strong> — the specific control domains for that regulation, with evidence requirements and artifact types.</li>
+        <li><strong>Tools Landscape</strong> — evaluations of compliance platforms and operational tools relevant to that framework.</li>
+        <li><strong>Advisory Services</strong> — service packages for readiness assessment, remediation, and audit support.</li>
+        <li><strong>AI & Data Advisory</strong> — optional enhancement modules for companies with AI/ML workloads.</li>
+      </ul>
+    </div>
+
+    <h2>Get in Touch</h2>
+    <div class="content">
+      <p>Interested in regulatory readiness consulting? Reach out to discuss how we can help your organization prepare.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding: var(--spacing-section) var(--spacing-page);
+  }
+
+  .about-page h1 {
+    margin-bottom: 2rem;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+  }
+
+  .table-wrapper table {
+    min-width: 32rem;
+  }
+</style>

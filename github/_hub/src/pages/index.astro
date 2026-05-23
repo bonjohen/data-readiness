@@ -19,6 +19,32 @@ const topics = discoverTopics();
       {topics.map((topic) => <TopicCard {...topic} />)}
     </div>
   </section>
+
+  <section class="container how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>Pick a Regulation</h3>
+        <p>Browse the catalog above and select the framework that applies to your business.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <h3>Review Controls & Evidence</h3>
+        <p>Each topic site breaks down the control domains and evidence your organization needs.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>Prepare for Readiness</h3>
+        <p>Use the tools landscape and service options to build your compliance program.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container footer-cta">
+    <p>Want to learn more about the platform?</p>
+    <a href="/about" class="cta-button">About Data Readiness</a>
+  </section>
 </BaseLayout>
 
 <style>
@@ -37,9 +63,53 @@ const topics = discoverTopics();
     gap: 1.5rem;
   }
 
+  .how-it-works {
+    padding: var(--spacing-section) var(--spacing-page);
+  }
+
+  .how-it-works h2 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .step {
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-cta {
+    text-align: center;
+    padding-bottom: var(--spacing-section);
+  }
+
   @media (max-width: 768px) {
     .topic-grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr;
     }
   }
 
