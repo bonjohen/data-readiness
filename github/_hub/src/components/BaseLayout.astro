@@ -22,6 +22,8 @@ const { title, description, ogImage } = Astro.props;
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   {ogImage && <meta property="og:image" content={ogImage} />}
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </head>
 <body>

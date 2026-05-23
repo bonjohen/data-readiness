@@ -14,12 +14,12 @@ status: "open"
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| 04.1 | Open | | | Create `github/_hub/.github/workflows/deploy.yml` — GitHub Pages deployment: trigger on push to main, Node 20, npm ci, astro build, upload artifact, deploy pages |
-| 04.2 | Open | | | Add CSP `<meta>` tag to BaseLayout `<head>`: `default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'` (PDR §8) |
-| 04.3 | Open | | | Full build verification: `npx astro build` completes < 30s (NFR-001), produces dist/ with index.html, about/index.html, 404.html, sitemap.xml |
-| 04.4 | Open | | | Verify discovery end-to-end: add a test manifest with status: live and a URL, rebuild, confirm card links correctly; add an invalid manifest, rebuild, confirm warning logged and card skipped |
-| 04.5 | Open | | | Verify zero-edit topic addition: create a new `github/test-topic/site.json`, rebuild hub, confirm new card appears without any hub source changes (US-006) |
-| 04.6 | Open | | | Remove test artifacts (test-topic folder) and run final clean build |
+| 04.1 | Completed | 2026-05-23 07:15 PM | 2026-05-23 07:16 PM | Create `github/_hub/.github/workflows/deploy.yml` — GitHub Pages deployment: trigger on push to main, Node 20, npm ci, astro build, upload artifact, deploy pages |
+| 04.2 | Completed | 2026-05-23 07:15 PM | 2026-05-23 07:16 PM | Add CSP `<meta>` tag to BaseLayout `<head>`: `default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'` (PDR §8) |
+| 04.3 | Completed | 2026-05-23 07:16 PM | 2026-05-23 07:16 PM | Full build verification: `npx astro build` completes < 30s (NFR-001), produces dist/ with index.html, about/index.html, 404.html, sitemap.xml |
+| 04.4 | Completed | 2026-05-23 07:16 PM | 2026-05-23 07:18 PM | Verify discovery end-to-end: add a test manifest with status: live and a URL, rebuild, confirm card links correctly; add an invalid manifest, rebuild, confirm warning logged and card skipped |
+| 04.5 | Completed | 2026-05-23 07:18 PM | 2026-05-23 07:19 PM | Verify zero-edit topic addition: create a new `github/test-topic/site.json`, rebuild hub, confirm new card appears without any hub source changes (US-006) |
+| 04.6 | Completed | 2026-05-23 07:19 PM | 2026-05-23 07:19 PM | Remove test artifacts (test-topic folder) and run final clean build |
 
 ## Context
 
@@ -153,7 +153,5 @@ Rebuild and check stderr for `[discover-topics] Invalid manifest` warning. Confi
 
 ## Phase Summary
 
-_To be filled after completion._
-
-- **Changes:** TBD
-- **Commit:** TBD
+- **Changes:** Created `.github/workflows/deploy.yml` (GitHub Pages deployment workflow with working-directory for hub subdirectory). Added CSP `<meta>` tag to BaseLayout. Verified: build completes in ~2s (NFR-001 < 30s), produces index.html, about/index.html, 404.html, sitemap-index.xml. Verified live manifest renders green badge with clickable link. Verified invalid manifest logs warning and skips card. Verified zero-edit topic addition (US-006 acceptance criterion). Cleaned up test artifacts, final build confirmed 12 topics.
+- **Commit:** `Phase 04: Deployment & Final Verification — deploy workflow, CSP, end-to-end verification`
