@@ -68,12 +68,12 @@ Migrate the existing SOC 2 readiness site (`c:\projects\soc2`, GitHub: `@bonjohe
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| B.1 | Open | | | Create `github/soc2/src/content/config.ts` — define 4 collections (controls, advisory, services, tools) with Zod schemas matching the reference project's `c:\projects\soc2\src\content\config.ts` |
-| B.2 | Open | | | Copy all 12 files from `c:\projects\soc2\src\content\controls\` to `github/soc2/src/content/controls/` (asset-inventory, backup-availability, change-management, data-handling, encryption-secrets, incident-response, logging-monitoring, logical-access, privacy, privileged-access-mfa, vendor-management, vulnerability-management) |
-| B.3 | Open | | | Copy all 7 files from `c:\projects\soc2\src\content\advisory\` to `github/soc2/src/content/advisory/` (ai-assisted-sdlc, human-review-agent-gates, model-provider-vendor-risk, prompt-response-logging, rag-vector-store-controls, training-inference-data-governance, warehouse-analytics-governance) |
-| B.4 | Open | | | Copy all 4 files from `c:\projects\soc2\src\content\services\` to `github/soc2/src/content/services/` (audit-support, continuous-compliance, readiness-sprint, remediation-program) |
-| B.5 | Open | | | Copy all 15 files from `c:\projects\soc2\src\content\tools\` to `github/soc2/src/content/tools/` (aws-azure-gcp, drata, github-gitlab, google-microsoft-365, jira-confluence, linear, notion, okta-auth0-entra, onetrust, secureframe, slack, sprinto, strike-graph, thoropass, vanta) |
-| B.6 | Open | | | Verify: `npx astro build` succeeds with content synced and schemas validated (Astro validates all frontmatter against Zod schemas at build time) |
+| B.1 | Completed | 2026-05-23 07:36 PM | 2026-05-23 07:37 PM | Create `github/soc2/src/content/config.ts` — define 4 collections (controls, advisory, services, tools) with Zod schemas matching the reference project's `c:\projects\soc2\src\content\config.ts` |
+| B.2 | Completed | 2026-05-23 07:36 PM | 2026-05-23 07:37 PM | Copy all 12 files from `c:\projects\soc2\src\content\controls\` to `github/soc2/src/content/controls/` (asset-inventory, backup-availability, change-management, data-handling, encryption-secrets, incident-response, logging-monitoring, logical-access, privacy, privileged-access-mfa, vendor-management, vulnerability-management) |
+| B.3 | Completed | 2026-05-23 07:36 PM | 2026-05-23 07:37 PM | Copy all 7 files from `c:\projects\soc2\src\content\advisory\` to `github/soc2/src/content/advisory/` (ai-assisted-sdlc, human-review-agent-gates, model-provider-vendor-risk, prompt-response-logging, rag-vector-store-controls, training-inference-data-governance, warehouse-analytics-governance) |
+| B.4 | Completed | 2026-05-23 07:36 PM | 2026-05-23 07:37 PM | Copy all 4 files from `c:\projects\soc2\src\content\services\` to `github/soc2/src/content/services/` (audit-support, continuous-compliance, readiness-sprint, remediation-program) |
+| B.5 | Completed | 2026-05-23 07:36 PM | 2026-05-23 07:37 PM | Copy all 15 files from `c:\projects\soc2\src\content\tools\` to `github/soc2/src/content/tools/` (aws-azure-gcp, drata, github-gitlab, google-microsoft-365, jira-confluence, linear, notion, okta-auth0-entra, onetrust, secureframe, slack, sprinto, strike-graph, thoropass, vanta) |
+| B.6 | Completed | 2026-05-23 07:37 PM | 2026-05-23 07:37 PM | Verify: `npx astro build` succeeds with content synced and schemas validated (Astro validates all frontmatter against Zod schemas at build time) |
 
 <details>
 <summary>Phase 010-B Context</summary>
@@ -134,10 +134,8 @@ export const collections = {
 
 ### Phase 010-B Summary
 
-_To be filled after completion._
-
-- **Changes:** TBD
-- **Commit:** TBD
+- **Changes:** Created `src/content/config.ts` with 4 Zod collection schemas (controls, advisory, services, tools). Copied 38 markdown content files: 12 controls, 7 advisory, 4 services, 15 tools. Build verified — Astro validated all frontmatter against schemas.
+- **Commit:** `Phase 010-B: SOC 2 content collections — 4 schemas, 38 markdown files`
 
 ---
 
