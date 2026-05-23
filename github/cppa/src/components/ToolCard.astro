@@ -1,0 +1,86 @@
+---
+interface Props {
+  name: string;
+  category: 'compliance' | 'operational';
+  good_fit: string;
+  cautions: string;
+}
+
+const { name, category, good_fit, cautions } = Astro.props;
+const categoryLabel = category === 'compliance' ? 'Compliance Platform' : 'Operational System';
+---
+
+<article class="card tool-card">
+  <div class="tool-header">
+    <h3>{name}</h3>
+    <span class={`category-badge ${category}`}>{categoryLabel}</span>
+  </div>
+  <div class="tool-fit">
+    <h4>Good Fit</h4>
+    <p>{good_fit}</p>
+  </div>
+  <div class="tool-cautions">
+    <h4>Cautions</h4>
+    <p>{cautions}</p>
+  </div>
+</article>
+
+<style>
+  .tool-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .tool-header h3 {
+    margin-bottom: 0;
+  }
+
+  .category-badge {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .category-badge.compliance {
+    background: var(--color-accent-strong);
+    color: #ffffff;
+  }
+
+  .category-badge.operational {
+    background: #065f46;
+    color: #a7f3d0;
+  }
+
+  .tool-card h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .tool-fit h4 {
+    color: var(--color-accent);
+  }
+
+  .tool-cautions h4 {
+    color: #f59e0b;
+  }
+
+  .tool-fit p,
+  .tool-cautions p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .tool-cautions p {
+    margin-bottom: 0;
+  }
+</style>

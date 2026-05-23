@@ -3,7 +3,8 @@
   "name": "GDPR Operational Readiness",
   "shortDescription": "Help U.S. SaaS companies identify controller/processor roles, map data flows, and document lawful processing",
   "regulation": "GDPR",
-  "status": "placeholder",
+  "status": "live",
   "order": 2,
-  "category": "privacy"
+  "category": "privacy",
+  "url": "https://gdpr.johnboen.com"
 }

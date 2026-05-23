@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import DisclaimerBanner from '../components/DisclaimerBanner.astro';
+
+const disclaimers = [
+  "We provide privacy readiness and operational guidance. We do not provide legal advice or regulatory representation.",
+  "State privacy law compliance ultimately depends on the specific facts of your operations and applicable law.",
+  "Management remains responsible for determining applicability, implementing controls, and responding to consumer requests.",
+  "We coordinate with legal counsel as needed, but we do not act as attorneys and do not provide legal opinions.",
+  "Where regulatory enforcement, litigation, or complex legal questions arise, qualified legal counsel is required.",
+];
+---
+
+<BaseLayout title="About" description="State privacy law readiness for companies operating across multiple US jurisdictions. Learn about our approach, team, and how to get started.">
+  <section class="content">
+    <h1>About</h1>
+
+    <div class="section">
+      <h2>What We Do</h2>
+      <p>We provide state privacy law readiness for companies operating across multiple US jurisdictions. Our service helps privacy leaders, legal teams, and compliance officers navigate the patchwork of state privacy laws with harmonized programs that reduce complexity and scale across jurisdictions.</p>
+
+      <p>We work with companies of all sizes that operate in multiple US states &mdash; the companies where multi-state privacy compliance is the difference between operational confidence and regulatory risk. See <a href="/services">our service packages</a> for details on pricing and deliverables.</p>
+    </div>
+
+    <div class="section">
+      <h2>What We Can Safely Offer</h2>
+      <div class="two-col">
+        <div class="offer-box yes">
+          <h3>We Do</h3>
+          <ul>
+            <li>Multi-state applicability analysis</li>
+            <li>Cross-state requirement harmonization</li>
+            <li>Privacy notice development</li>
+            <li>Universal opt-out implementation guidance</li>
+            <li>Consumer rights response procedures</li>
+            <li>Privacy impact assessment methodology</li>
+            <li>Data broker registration assessment</li>
+            <li>New state law monitoring</li>
+          </ul>
+        </div>
+        <div class="offer-box no">
+          <h3>We Do Not</h3>
+          <ul>
+            <li>Provide legal advice or representation</li>
+            <li>Act as regulatory counsel</li>
+            <li>Guarantee compliance outcomes</li>
+            <li>Represent companies before state AGs</li>
+            <li>File regulatory registrations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Staffing and Skillset</h2>
+      <p>Our team covers the six core competencies needed to deliver multi-state privacy readiness effectively:</p>
+
+      <div class="staffing-grid">
+        <div class="staff-item">
+          <h4>Privacy Lead</h4>
+          <p>Multi-state privacy fluency, cross-jurisdiction harmonization, and program design.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Regulatory Analyst</h4>
+          <p>State law tracking, threshold analysis, and requirement mapping across jurisdictions.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Program Manager</h4>
+          <p>Compliance coordination, vendor oversight, and status reporting across workstreams.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Policy Writer</h4>
+          <p>Privacy notices, internal procedures, and cross-state templates that satisfy all applicable laws.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Technical Privacy</h4>
+          <p>GPC implementation, consent mechanisms, opt-out signals, and privacy-by-design engineering.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Vendor/Data Broker Specialist</h4>
+          <p>Data sharing controls, broker registration, and contract requirements across jurisdictions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Our Approach</h2>
+      <div class="two-col">
+        <div>
+          <h3>First Version</h3>
+          <ul>
+            <li>Readiness Sprint with harmonized compliance matrix</li>
+            <li>Universal privacy notice and cross-state procedures</li>
+            <li>Opt-out implementation plan and PIA methodology</li>
+            <li>Manual + tool-agnostic by design</li>
+            <li>Executive summary + operational remediation plan</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Later Maturity</h3>
+          <ul>
+            <li>Automated state law monitoring</li>
+            <li>Multi-framework privacy mappings</li>
+            <li>Continuous compliance health dashboard</li>
+            <li>Consumer request automation</li>
+            <li>Privacy program metrics and reporting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Launch Readiness Metrics</h2>
+      <p>We hold ourselves to measurable targets:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Target</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time from kickoff to harmonized compliance report</td>
+              <td>15&ndash;20 business days</td>
+            </tr>
+            <tr>
+              <td>State law coverage</td>
+              <td>All currently effective state privacy laws mapped</td>
+            </tr>
+            <tr>
+              <td>Compliance matrix completeness</td>
+              <td>100% of applicable requirements mapped to controls</td>
+            </tr>
+            <tr>
+              <td>Privacy notice coverage</td>
+              <td>Single notice satisfying all applicable state requirements</td>
+            </tr>
+            <tr>
+              <td>Consumer rights response coverage</td>
+              <td>Procedures documented for all applicable consumer rights</td>
+            </tr>
+            <tr>
+              <td>New law monitoring turnaround</td>
+              <td>Applicability assessment within 10 business days of enactment</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section cta-section">
+      <h2>Get in Touch</h2>
+      <p>Ready to harmonize your multi-state privacy program? Reach out to discuss your jurisdictions, timeline, and goals.</p>
+      <a href="mailto:john@johnboen.com" class="cta-button">Email Us</a>
+    </div>
+
+    <DisclaimerBanner statements={disclaimers} />
+  </section>
+</BaseLayout>
+
+<style>
+  .two-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .offer-box {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+
+  .offer-box.yes {
+    border-color: var(--color-accent);
+  }
+
+  .offer-box.no {
+    border-color: #f59e0b;
+  }
+
+  .offer-box h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .offer-box.yes h3 {
+    color: var(--color-accent);
+  }
+
+  .offer-box.no h3 {
+    color: #f59e0b;
+  }
+
+  .offer-box ul {
+    margin-bottom: 0;
+  }
+
+  .offer-box li {
+    font-size: 0.9rem;
+  }
+
+  .staffing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .staff-item {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+
+  .staff-item h4 {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .staff-item p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+  }
+
+  .cta-section p {
+    max-width: 36rem;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .two-col {
+      grid-template-columns: 1fr;
+    }
+
+    .staffing-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .staffing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

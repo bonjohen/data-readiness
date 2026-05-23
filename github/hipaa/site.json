@@ -3,7 +3,8 @@
   "name": "HIPAA Security Rule Readiness",
   "shortDescription": "Help health-tech vendors document ePHI safeguards, access controls, audit logging, and risk analysis",
   "regulation": "HIPAA Security Rule",
-  "status": "placeholder",
+  "status": "live",
   "order": 5,
-  "category": "security"
+  "category": "security",
+  "url": "https://hipaa.johnboen.com"
 }

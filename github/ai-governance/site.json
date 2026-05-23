@@ -3,7 +3,8 @@
   "name": "AI Governance / AI Regulatory Readiness",
   "shortDescription": "Help AI companies build model inventories, risk classifications, and NIST AI RMF mappings",
   "regulation": "NIST AI RMF",
-  "status": "placeholder",
+  "status": "live",
   "order": 10,
-  "category": "governance"
+  "category": "governance",
+  "url": "https://ai-governance.johnboen.com"
 }

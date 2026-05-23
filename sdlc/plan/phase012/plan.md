@@ -5,7 +5,7 @@ depends_on: "Phase 011"
 goal: "Every regulation topic site is a fully buildable, servable Astro project with regulation-specific pages, shared components, and deploy workflows. All 12 sites (including SOC 2) build successfully and the hub shows all 12 as Live."
 source_pdr_sections: ["2.3", "6.1"]
 source_user_stories: ["US-003", "US-006", "US-008"]
-status: "open"
+status: "completed"
 ---
 
 # Phase 012: Site Scaffold & Build — All 11 Regulation Sites
@@ -59,15 +59,15 @@ Phase 011 created the content collections (controls, advisory, services, tools m
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| A.1 | Open | | | Create `package.json` for all 11 sites — name `{id}-readiness`, type module, scripts (dev port per matrix, build, preview), deps (astro ^5.8.0, @astrojs/sitemap ^3.7.2, sharp ^0.33.5) |
-| A.2 | Open | | | Create `astro.config.mjs` for all 11 sites — site URL per matrix, base `/`, sitemap integration, server port per matrix |
-| A.3 | Open | | | Create `tsconfig.json` for all 11 sites — extends `astro/tsconfigs/strict` |
-| A.4 | Open | | | Create `src/config.ts` for all 11 sites — SITE constant with title, description, URL, author per matrix |
-| A.5 | Open | | | Copy `github/soc2/src/styles/global.css` to all 11 sites |
-| A.6 | Open | | | Copy `github/soc2/public/favicon.svg` to all 11 sites |
-| A.7 | Open | | | Create `public/CNAME` for all 11 sites per matrix |
-| A.8 | Open | | | Copy 9 shared components from `github/soc2/src/components/` to all 11 sites: BaseLayout, Footer, HeroSection, ControlCard, ServiceCard, ToolCard, AdvisoryCard, TimelineDiagram, DisclaimerBanner |
-| A.9 | Open | | | Run `npm install` in all 11 sites |
+| A.1 | Completed | 2026-05-23 08:30 PM | 2026-05-23 08:32 PM | Create `package.json` for all 11 sites — name `{id}-readiness`, type module, scripts (dev port per matrix, build, preview), deps (astro ^5.8.0, @astrojs/sitemap ^3.7.2, sharp ^0.33.5) |
+| A.2 | Completed | 2026-05-23 08:30 PM | 2026-05-23 08:32 PM | Create `astro.config.mjs` for all 11 sites — site URL per matrix, base `/`, sitemap integration, server port per matrix |
+| A.3 | Completed | 2026-05-23 08:30 PM | 2026-05-23 08:32 PM | Create `tsconfig.json` for all 11 sites — extends `astro/tsconfigs/strict` |
+| A.4 | Completed | 2026-05-23 08:30 PM | 2026-05-23 08:32 PM | Create `src/config.ts` for all 11 sites — SITE constant with title, description, URL, author per matrix |
+| A.5 | Completed | 2026-05-23 08:30 PM | 2026-05-23 08:32 PM | Copy `github/soc2/src/styles/global.css` to all 11 sites |
+| A.6 | Completed | 2026-05-23 08:30 PM | 2026-05-23 08:32 PM | Copy `github/soc2/public/favicon.svg` to all 11 sites |
+| A.7 | Completed | 2026-05-23 08:30 PM | 2026-05-23 08:32 PM | Create `public/CNAME` for all 11 sites per matrix |
+| A.8 | Completed | 2026-05-23 08:30 PM | 2026-05-23 08:32 PM | Copy 9 shared components from `github/soc2/src/components/` to all 11 sites: BaseLayout, Footer, HeroSection, ControlCard, ServiceCard, ToolCard, AdvisoryCard, TimelineDiagram, DisclaimerBanner |
+| A.9 | Completed | 2026-05-23 08:32 PM | 2026-05-23 08:35 PM | Run `npm install` in all 11 sites |
 
 <details>
 <summary>Phase 012-A Context</summary>
@@ -138,11 +138,11 @@ export const SITE = {
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| B.1 | Open | | | Copy `controls-evidence.astro` from SOC 2 to all 11 sites — `getCollection('controls')` sorted by order, mapped to ControlCard |
-| B.2 | Open | | | Copy `ai-data.astro` from SOC 2 to all 11 sites — `getCollection('advisory')` sorted by order, mapped to AdvisoryCard |
-| B.3 | Open | | | Copy `services.astro` from SOC 2 to all 11 sites — `getCollection('services')` sorted by order, mapped to ServiceCard + DisclaimerBanner |
-| B.4 | Open | | | Copy `tools.astro` from SOC 2 to all 11 sites — `getCollection('tools')` filtered by category, mapped to ToolCard |
-| B.5 | Open | | | Copy `404.astro` from SOC 2 to all 11 sites — error heading, message, home link |
+| B.1 | Completed | 2026-05-23 08:35 PM | 2026-05-23 08:36 PM | Copy `controls-evidence.astro` from SOC 2 to all 11 sites — `getCollection('controls')` sorted by order, mapped to ControlCard |
+| B.2 | Completed | 2026-05-23 08:35 PM | 2026-05-23 08:36 PM | Copy `ai-data.astro` from SOC 2 to all 11 sites — `getCollection('advisory')` sorted by order, mapped to AdvisoryCard |
+| B.3 | Completed | 2026-05-23 08:35 PM | 2026-05-23 08:36 PM | Copy `services.astro` from SOC 2 to all 11 sites — `getCollection('services')` sorted by order, mapped to ServiceCard + DisclaimerBanner |
+| B.4 | Completed | 2026-05-23 08:35 PM | 2026-05-23 08:36 PM | Copy `tools.astro` from SOC 2 to all 11 sites — `getCollection('tools')` filtered by category, mapped to ToolCard |
+| B.5 | Completed | 2026-05-23 08:35 PM | 2026-05-23 08:36 PM | Copy `404.astro` from SOC 2 to all 11 sites — error heading, message, home link |
 
 <details>
 <summary>Phase 012-B Context</summary>
@@ -175,11 +175,11 @@ Same pattern for ai-data (AdvisoryCard), services (ServiceCard), tools (ToolCard
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| C.1 | Open | | | Create Nav.astro for all 11 sites — pages array with regulation-specific "What is X?" route/label per matrix, other 6 nav items identical |
-| C.2 | Open | | | Create `index.astro` for all 11 sites — HeroSection with regulation-specific headline/subheadline, "Why {Regulation} Matters" value grid (4 items), "How We Help" service overview cards, CTA section |
-| C.3 | Open | | | Create `what-is-{x}.astro` for all 11 sites — regulation framework definition, scope, key requirements table, readiness checklist, CTA |
-| C.4 | Open | | | Create `readiness-process.astro` for all 11 sites — regulation-specific timeline phases (Intake, Assessment, Outputs, Follow-on) with activities per phase, RACI context |
-| C.5 | Open | | | Create `about.astro` for all 11 sites — company info, approach, regulation-specific positioning, DisclaimerBanner |
+| C.1 | Completed | 2026-05-23 08:37 PM | 2026-05-23 08:38 PM | Create Nav.astro for all 11 sites — pages array with regulation-specific "What is X?" route/label per matrix, other 6 nav items identical |
+| C.2 | Completed | 2026-05-23 08:37 PM | 2026-05-23 08:55 PM | Create `index.astro` for all 11 sites — HeroSection with regulation-specific headline/subheadline, "Why {Regulation} Matters" value grid (4 items), "How We Help" service overview cards, CTA section |
+| C.3 | Completed | 2026-05-23 08:37 PM | 2026-05-23 08:55 PM | Create `what-is-{x}.astro` for all 11 sites — regulation framework definition, scope, key requirements table, readiness checklist, CTA |
+| C.4 | Completed | 2026-05-23 08:37 PM | 2026-05-23 08:55 PM | Create `readiness-process.astro` for all 11 sites — regulation-specific timeline phases (Intake, Assessment, Outputs, Follow-on) with activities per phase, RACI context |
+| C.5 | Completed | 2026-05-23 08:37 PM | 2026-05-23 08:55 PM | Create `about.astro` for all 11 sites — company info, approach, regulation-specific positioning, DisclaimerBanner |
 
 <details>
 <summary>Phase 012-C Context</summary>
@@ -263,9 +263,9 @@ Activities should be regulation-specific (e.g., GDPR: "ROPA development", "Lawfu
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| D.1 | Open | | | Create `.github/workflows/deploy.yml` for all 11 sites — GitHub Pages deployment (trigger on push to main, Node 20, `working-directory: github/{id}`, concurrency group `pages-{id}`) |
-| D.2 | Open | | | Update `site.json` for all 11 sites — set `status` to `"live"`, add `url: "https://{cname}"` |
-| D.3 | Open | | | Rebuild hub (`npx astro build` in `github/_hub/`) and verify all 12 topics show green "Live" badge with clickable links |
+| D.1 | Completed | 2026-05-23 08:40 PM | 2026-05-23 08:42 PM | Create `.github/workflows/deploy.yml` for all 11 sites — GitHub Pages deployment (trigger on push to main, Node 20, `working-directory: github/{id}`, concurrency group `pages-{id}`) |
+| D.2 | Completed | 2026-05-23 08:40 PM | 2026-05-23 08:42 PM | Update `site.json` for all 11 sites — set `status` to `"live"`, add `url: "https://{cname}"` |
+| D.3 | Completed | 2026-05-23 08:55 PM | 2026-05-23 08:57 PM | Rebuild hub (`npx astro build` in `github/_hub/`) and verify all 12 topics show green "Live" badge with clickable links |
 
 <details>
 <summary>Phase 012-D Context</summary>
@@ -337,9 +337,9 @@ jobs:
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| E.1 | Open | | | Build all 11 sites (`npx astro build` in each `github/{id}/`) — verify each produces 9 pages + sitemap, zero errors, < 30s build time |
-| E.2 | Open | | | Verify cross-site consistency: all sites use same design tokens (color palette, typography, spacing), same skip-link pattern, same footer disclaimer style |
-| E.3 | Open | | | Verify hub integration: rebuild hub, confirm all 12 topics show "Live" badge with correct URLs in both index cards and about page table |
+| E.1 | Completed | 2026-05-23 08:57 PM | 2026-05-23 09:00 PM | Build all 11 sites (`npx astro build` in each `github/{id}/`) — verify each produces 9 pages + sitemap, zero errors, < 30s build time |
+| E.2 | Completed | 2026-05-23 09:00 PM | 2026-05-23 09:02 PM | Verify cross-site consistency: all sites use same design tokens (color palette, typography, spacing), same skip-link pattern, same footer disclaimer style |
+| E.3 | Completed | 2026-05-23 09:02 PM | 2026-05-23 09:02 PM | Verify hub integration: rebuild hub, confirm all 12 topics show "Live" badge with correct URLs in both index cards and about page table |
 
 <details>
 <summary>Phase 012-E Context</summary>
@@ -396,3 +396,10 @@ Plus 11 npm installs (A.9) and 11 site.json updates (D.2).
 5. **Commit cadence:** One commit per phase (012-A through 012-E). Each commit independently valid.
 
 6. **Port registry update:** Ports 4341–4351 are assigned to the 11 new sites. These should be added to the global port registry in `CLAUDE.md` after completion.
+
+---
+
+## Phase 012 Summary
+
+- **Changes:** Created complete Astro project scaffolds for all 11 regulation sites (cppa, gdpr, coppa, ftc-safeguards, hipaa, pci-dss, ny-shield, state-privacy, sec-cyber, ai-governance, eu-dora). Each site has: package.json, astro.config.mjs, tsconfig.json, src/config.ts, src/styles/global.css, public/favicon.svg, public/CNAME, 10 components (9 shared + Nav), 9 pages (5 shared data-driven + 4 regulation-specific), .github/workflows/deploy.yml. Updated all 11 site.json files to status "live" with URLs. Rebuilt hub — all 12 topics show Live badges. Fixed ny-shield config.ts apostrophe parse error. All 11 sites build successfully (9 pages each, <2s build time).
+- **Commit:** `Phase 012: Site scaffold & build — all 11 regulation sites with pages, components, deploy workflows`

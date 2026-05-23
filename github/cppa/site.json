@@ -3,7 +3,8 @@
   "name": "CCPA / CPRA Privacy Readiness",
   "shortDescription": "Help companies map personal data, update privacy notices, and prepare evidence for California privacy obligations",
   "regulation": "CCPA / CPRA",
-  "status": "placeholder",
+  "status": "live",
   "order": 1,
-  "category": "privacy"
+  "category": "privacy",
+  "url": "https://cppa.johnboen.com"
 }

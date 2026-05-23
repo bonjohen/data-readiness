@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import TimelineDiagram from '../components/TimelineDiagram.astro';
+---
+
+<BaseLayout title="Readiness Process" description="Step-by-step SEC cybersecurity disclosure readiness process, sprint timeline, and deliverables for public companies.">
+  <section class="content">
+    <h1>Readiness Process</h1>
+
+    <p>The readiness sprint is a focused engagement that produces everything you need to meet SEC cybersecurity disclosure requirements with confidence: a materiality determination framework, 8-K filing procedures, 10-K disclosure language, and board governance documentation.</p>
+
+    <div class="section">
+      <h2>Sprint Timeline</h2>
+      <p>The engagement follows four phases, each building on the outputs of the previous one.</p>
+      <TimelineDiagram />
+    </div>
+
+    <div class="section">
+      <h2>Phase Details</h2>
+
+      <div class="phase-detail">
+        <h3>1. Intake &amp; Scoping <span class="phase-duration">Week 1</span></h3>
+        <p>We start by understanding your current disclosure practices and governance structure.</p>
+        <ul>
+          <li><strong>Current disclosure practices review</strong> &mdash; assess existing cybersecurity disclosures in prior 10-K and 8-K filings</li>
+          <li><strong>Incident response process evaluation</strong> &mdash; understand current IR processes and how they connect to disclosure decisions</li>
+          <li><strong>Board governance structure assessment</strong> &mdash; map current board oversight of cybersecurity risk, including committee structures</li>
+          <li><strong>Materiality determination process review</strong> &mdash; evaluate whether a defined materiality process exists and how it functions</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>2. Assessment <span class="phase-duration">Week 2&ndash;3</span></h3>
+        <p>We evaluate your disclosure readiness against SEC requirements and emerging best practices.</p>
+        <ul>
+          <li><strong>8-K readiness evaluation</strong> &mdash; assess ability to determine materiality and file within 4 business days</li>
+          <li><strong>10-K disclosure gap analysis</strong> &mdash; compare current annual disclosures against SEC rule requirements</li>
+          <li><strong>Board oversight documentation review</strong> &mdash; evaluate whether board cyber oversight is documented in disclosure-ready form</li>
+          <li><strong>Management role and expertise assessment</strong> &mdash; assess how management's cyber role and expertise are described and evidenced</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>3. Outputs <span class="phase-duration">Week 3&ndash;4</span></h3>
+        <p>We deliver the artifacts that establish your SEC disclosure readiness.</p>
+        <ul>
+          <li><strong>Materiality determination framework</strong> &mdash; defined process with criteria, roles, escalation paths, and documentation requirements</li>
+          <li><strong>8-K filing procedures and templates</strong> &mdash; step-by-step procedures for incident-to-disclosure workflow</li>
+          <li><strong>10-K disclosure language drafts</strong> &mdash; ready-to-file language for risk management, strategy, and governance sections</li>
+          <li><strong>Board briefing framework</strong> &mdash; structured format for ongoing board cyber risk reporting</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>4. Follow-on <span class="phase-duration">Ongoing</span></h3>
+        <p>After the readiness sprint, ongoing activities keep your disclosure program current.</p>
+        <ul>
+          <li><strong>Incident-to-disclosure playbook maintenance</strong> &mdash; update procedures as incidents occur and SEC guidance evolves</li>
+          <li><strong>Board reporting cadence</strong> &mdash; support regular board cybersecurity briefings aligned to disclosure requirements</li>
+          <li><strong>Annual 10-K disclosure updates</strong> &mdash; refresh risk management and governance language for each filing cycle</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Sprint Deliverables</h2>
+      <p>Every readiness sprint produces these minimum deliverables:</p>
+      <div class="deliverables-grid">
+        <div class="deliverable-item">Materiality determination framework</div>
+        <div class="deliverable-item">8-K filing procedures and templates</div>
+        <div class="deliverable-item">10-K disclosure language drafts</div>
+        <div class="deliverable-item">Board oversight documentation</div>
+        <div class="deliverable-item">Management role descriptions</div>
+        <div class="deliverable-item">Incident-to-disclosure playbook</div>
+        <div class="deliverable-item">Third-party risk disclosure support</div>
+        <div class="deliverable-item">Board briefing framework</div>
+      </div>
+    </div>
+
+    <div class="section cta-section">
+      <h2>Start Your Readiness Sprint</h2>
+      <p>Most companies complete the readiness sprint in 3&ndash;4 weeks. The result is a clear, actionable disclosure framework aligned to SEC requirements.</p>
+      <a href="/about" class="cta-button">Get in Touch</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .phase-detail {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .phase-detail h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .phase-duration {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.125rem 0.5rem;
+  }
+
+  .phase-detail ul {
+    margin-bottom: 0;
+  }
+
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .deliverable-item {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: var(--color-heading);
+  }
+
+  .deliverable-item::before {
+    content: '\2713';
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+    font-weight: 700;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+  }
+
+  .cta-section p {
+    max-width: 36rem;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .deliverables-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

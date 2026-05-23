@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+---
+
+<BaseLayout title="What is PCI DSS?" description="Understanding PCI DSS v4.0.1, the 12 requirements, SAQ vs. ROC validation, and readiness for technology companies handling payment data.">
+  <section class="content">
+    <h1>What is PCI DSS?</h1>
+
+    <p>PCI DSS (Payment Card Industry Data Security Standard) v4.0.1 is the global standard for protecting payment card data. Developed by the PCI Security Standards Council &mdash; founded by Visa, Mastercard, American Express, Discover, and JCB &mdash; it applies to all entities that store, process, or transmit cardholder data or sensitive authentication data.</p>
+
+    <p>For technology companies that handle payment data, PCI DSS compliance is not optional &mdash; it is a contractual requirement of your merchant agreement. Your acquiring bank validates compliance annually, and non-compliance at the time of a breach carries severe financial and operational consequences.</p>
+
+    <div class="section">
+      <h2>The 12 Requirements</h2>
+      <p>PCI DSS organizes its 12 requirements into six goals. Every requirement must be met for compliance validation.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Goal</th>
+              <th>Requirements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Build and Maintain a Secure Network and Systems</strong></td>
+              <td>1. Install and maintain network security controls (firewalls)<br />2. Apply secure configurations to all system components (no vendor defaults)</td>
+            </tr>
+            <tr>
+              <td><strong>Protect Account Data</strong></td>
+              <td>3. Protect stored account data<br />4. Protect cardholder data with strong cryptography during transmission</td>
+            </tr>
+            <tr>
+              <td><strong>Maintain a Vulnerability Management Program</strong></td>
+              <td>5. Protect all systems and networks from malicious software<br />6. Develop and maintain secure systems and software</td>
+            </tr>
+            <tr>
+              <td><strong>Implement Strong Access Control Measures</strong></td>
+              <td>7. Restrict access by business need to know<br />8. Identify users and authenticate access (unique IDs)<br />9. Restrict physical access to cardholder data</td>
+            </tr>
+            <tr>
+              <td><strong>Regularly Monitor and Test Networks</strong></td>
+              <td>10. Log and monitor all access to system components and cardholder data<br />11. Test security of systems and networks regularly</td>
+            </tr>
+            <tr>
+              <td><strong>Maintain an Information Security Policy</strong></td>
+              <td>12. Support information security with organizational policies and programs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>SAQ vs. ROC Validation</h2>
+      <p>PCI DSS compliance is validated through either a Self-Assessment Questionnaire (SAQ) or a Report on Compliance (ROC). The appropriate validation type depends on your merchant level, transaction volume, and how you handle cardholder data.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>SAQ</th>
+              <th>ROC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Performed By</strong></td>
+              <td>Self-assessment by the merchant</td>
+              <td>On-site assessment by a Qualified Security Assessor (QSA)</td>
+            </tr>
+            <tr>
+              <td><strong>Typical Applicability</strong></td>
+              <td>Level 2&ndash;4 merchants (lower transaction volumes)</td>
+              <td>Level 1 merchants (6M+ transactions/year) and service providers</td>
+            </tr>
+            <tr>
+              <td><strong>Scope</strong></td>
+              <td>Varies by SAQ type (A, A-EP, B, B-IP, C, C-VT, D, P2PE)</td>
+              <td>Full 12-requirement assessment of the CDE</td>
+            </tr>
+            <tr>
+              <td><strong>Output</strong></td>
+              <td>Completed SAQ + Attestation of Compliance (AOC)</td>
+              <td>Report on Compliance (ROC) + Attestation of Compliance (AOC)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>v4.0.1 Key Changes</h2>
+      <p>PCI DSS v4.0.1 introduces several significant changes from previous versions that affect how organizations approach compliance:</p>
+
+      <ul>
+        <li><strong>Customized approach</strong> &mdash; organizations can now meet requirements using alternative controls that satisfy the objective, not just the prescribed method</li>
+        <li><strong>Targeted risk analysis</strong> &mdash; requirement-specific risk analyses replace the blanket annual risk assessment for certain controls</li>
+        <li><strong>Enhanced authentication</strong> &mdash; multi-factor authentication (MFA) requirements expanded beyond remote access to all access into the CDE</li>
+        <li><strong>Security awareness</strong> &mdash; expanded training requirements including phishing awareness and social engineering</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Cardholder Data Environment (CDE) Scoping</h2>
+      <p>Scope defines the systems, networks, and processes that are subject to PCI DSS requirements. Accurate scoping is the most important decision in the compliance process &mdash; too broad increases cost and complexity; too narrow risks a failed assessment.</p>
+
+      <p>Your CDE scope includes:</p>
+      <ul>
+        <li><strong>CDE systems</strong> &mdash; any system that stores, processes, or transmits cardholder data</li>
+        <li><strong>Connected-to systems</strong> &mdash; systems that connect to or can impact the security of the CDE</li>
+        <li><strong>Security-impacting systems</strong> &mdash; systems that could affect the security of the CDE (firewalls, IDS, authentication servers)</li>
+        <li><strong>Network segments</strong> &mdash; any network segment not adequately segmented from the CDE</li>
+        <li><strong>Third-party service providers</strong> &mdash; vendors that store, process, or transmit cardholder data on your behalf</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Readiness Assessment Checklist</h2>
+      <p>Before engaging a QSA or completing your SAQ, evaluate where your organization stands against these readiness questions:</p>
+
+      <ol class="checklist">
+        <li>Is the cardholder data environment (CDE) clearly defined with documented data flows?</li>
+        <li>Is network segmentation validated and tested to isolate the CDE from out-of-scope systems?</li>
+        <li>Is encryption implemented for both stored cardholder data and data in transit?</li>
+        <li>Are access controls in place with MFA for all access into the CDE?</li>
+        <li>Is a vulnerability management program operational with ASV scan schedules?</li>
+        <li>Is there an information security policy covering all 12 requirements?</li>
+      </ol>
+
+      <p>If you can't confidently answer "yes" to most of these, a <a href="/readiness-process">readiness sprint</a> will get you there.</p>
+    </div>
+
+    <div class="section callout">
+      <p><strong>Next step:</strong> See our <a href="/readiness-process">readiness process</a> to understand how we help technology companies prepare for PCI DSS v4.0.1 compliance.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .checklist {
+    padding-left: 1.5rem;
+  }
+
+  .checklist li {
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .checklist li::marker {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+</style>

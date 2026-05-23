@@ -3,7 +3,8 @@
   "name": "FTC Safeguards Rule Readiness",
   "shortDescription": "Help non-bank financial-service businesses build information security programs and risk assessments",
   "regulation": "FTC Safeguards Rule",
-  "status": "placeholder",
+  "status": "live",
   "order": 4,
-  "category": "security"
+  "category": "security",
+  "url": "https://ftc-safeguards.johnboen.com"
 }

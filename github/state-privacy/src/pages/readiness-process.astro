@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import TimelineDiagram from '../components/TimelineDiagram.astro';
+---
+
+<BaseLayout title="Readiness Process" description="Step-by-step state privacy law readiness process, sprint timeline, and deliverables for multi-state compliance.">
+  <section class="content">
+    <h1>Readiness Process</h1>
+
+    <p>The readiness sprint is a focused engagement that produces everything you need to harmonize your privacy program across multiple state jurisdictions: a multi-state applicability analysis, harmonized privacy notices, universal opt-out implementation, and cross-state rights response procedures.</p>
+
+    <div class="section">
+      <h2>Sprint Timeline</h2>
+      <p>The engagement follows four phases, each building on the outputs of the previous one.</p>
+      <TimelineDiagram />
+    </div>
+
+    <div class="section">
+      <h2>Phase Details</h2>
+
+      <div class="phase-detail">
+        <h3>1. Intake &amp; Scoping <span class="phase-duration">Week 1</span></h3>
+        <p>We start by understanding your multi-state footprint and current privacy posture.</p>
+        <ul>
+          <li><strong>Multi-state applicability analysis</strong> &mdash; identify which state privacy laws apply based on your operations, revenue, and consumer reach</li>
+          <li><strong>Current privacy program review</strong> &mdash; assess existing privacy notices, consent mechanisms, and data handling procedures</li>
+          <li><strong>Consumer rights workflow assessment</strong> &mdash; evaluate current processes for responding to consumer privacy requests</li>
+          <li><strong>Opt-out mechanism inventory</strong> &mdash; catalog existing opt-out mechanisms and assess GPC support readiness</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>2. Assessment <span class="phase-duration">Week 2&ndash;3</span></h3>
+        <p>We evaluate your privacy program against the requirements of all applicable state laws.</p>
+        <ul>
+          <li><strong>Cross-state requirement mapping</strong> &mdash; map overlapping and divergent requirements across all applicable state laws</li>
+          <li><strong>Privacy notice gap analysis</strong> &mdash; identify gaps between current disclosures and multi-state requirements</li>
+          <li><strong>Consent and opt-out mechanism evaluation</strong> &mdash; assess whether current mechanisms meet the strictest applicable standards</li>
+          <li><strong>PIA requirement assessment</strong> &mdash; determine which processing activities trigger privacy impact assessment requirements</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>3. Outputs <span class="phase-duration">Week 3&ndash;4</span></h3>
+        <p>We deliver the artifacts that harmonize your privacy program across jurisdictions.</p>
+        <ul>
+          <li><strong>Harmonized compliance matrix</strong> &mdash; every requirement mapped across states, with a unified control set that satisfies all</li>
+          <li><strong>Universal privacy notice template</strong> &mdash; a single privacy notice that meets or exceeds all applicable state requirements</li>
+          <li><strong>Cross-state rights response procedures</strong> &mdash; standardized procedures for handling consumer requests under all applicable laws</li>
+          <li><strong>Opt-out implementation plan</strong> &mdash; technical and operational plan for universal opt-out including GPC support</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>4. Follow-on <span class="phase-duration">Ongoing</span></h3>
+        <p>After the readiness sprint, ongoing monitoring keeps your program current as new laws take effect.</p>
+        <ul>
+          <li><strong>New state law monitoring</strong> &mdash; track newly enacted and proposed state privacy legislation for applicability</li>
+          <li><strong>Privacy notice updates</strong> &mdash; update disclosures as new laws take effect or existing laws are amended</li>
+          <li><strong>PIA program maintenance</strong> &mdash; maintain privacy impact assessment program as processing activities and requirements evolve</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Sprint Deliverables</h2>
+      <p>Every readiness sprint produces these minimum deliverables:</p>
+      <div class="deliverables-grid">
+        <div class="deliverable-item">Multi-state applicability analysis</div>
+        <div class="deliverable-item">Harmonized compliance matrix</div>
+        <div class="deliverable-item">Universal privacy notice template</div>
+        <div class="deliverable-item">Cross-state rights response procedures</div>
+        <div class="deliverable-item">Opt-out implementation plan</div>
+        <div class="deliverable-item">PIA methodology and triggers</div>
+        <div class="deliverable-item">Data broker registration assessment</div>
+        <div class="deliverable-item">New state law monitoring plan</div>
+      </div>
+    </div>
+
+    <div class="section cta-section">
+      <h2>Start Your Readiness Sprint</h2>
+      <p>Most companies complete the readiness sprint in 3&ndash;4 weeks. The result is a harmonized privacy program that scales across all applicable state jurisdictions.</p>
+      <a href="/about" class="cta-button">Get in Touch</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .phase-detail {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .phase-detail h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .phase-duration {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.125rem 0.5rem;
+  }
+
+  .phase-detail ul {
+    margin-bottom: 0;
+  }
+
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .deliverable-item {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: var(--color-heading);
+  }
+
+  .deliverable-item::before {
+    content: '\2713';
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+    font-weight: 700;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+  }
+
+  .cta-section p {
+    max-width: 36rem;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .deliverables-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

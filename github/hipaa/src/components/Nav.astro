@@ -1,0 +1,158 @@
+---
+import { SITE } from '../config';
+
+const pages = [
+  { href: '/what-is-hipaa', label: 'What is HIPAA?' },
+  { href: '/readiness-process', label: 'Process' },
+  { href: '/controls-evidence', label: 'Controls' },
+  { href: '/ai-data', label: 'AI & Data' },
+  { href: '/services', label: 'Services' },
+  { href: '/tools', label: 'Tools' },
+  { href: '/about', label: 'About' },
+];
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string): boolean {
+  if (href === '/') return currentPath === '/' || currentPath === '/index.html';
+  return currentPath.startsWith(href);
+}
+---
+
+<nav aria-label="Main navigation" class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">{SITE.title}</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+      <span class="hamburger"></span>
+    </label>
+    <ul class="nav-links">
+      {pages.map((page) => (
+        <li>
+          <a
+            href={page.href}
+            aria-current={isActive(page.href) ? 'page' : undefined}
+          >
+            {page.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .site-nav {
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-page);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 3.5rem;
+  }
+
+  .nav-brand {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-heading);
+    text-decoration: none;
+    margin-right: auto;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-brand:hover {
+    color: var(--color-accent);
+  }
+
+  .nav-toggle-input {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .hamburger {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: var(--color-text);
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: var(--color-text);
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before {
+    top: -6px;
+  }
+
+  .hamburger::after {
+    top: 6px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.125rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.5rem 0.625rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    transition: color 0.15s, background 0.15s;
+  }
+
+  .nav-links a:hover {
+    background: rgba(96, 165, 250, 0.1);
+    color: var(--color-accent);
+  }
+
+  .nav-links a[aria-current='page'] {
+    color: var(--color-accent);
+    font-weight: 600;
+    background: rgba(96, 165, 250, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle-label {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+
+    .nav-toggle-input:checked ~ .nav-links {
+      display: flex;
+    }
+  }
+</style>

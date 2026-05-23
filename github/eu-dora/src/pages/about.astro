@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import DisclaimerBanner from '../components/DisclaimerBanner.astro';
+
+const disclaimers = [
+  "We provide governance readiness and risk management guidance. We do not provide legal, audit, or regulatory representation.",
+  "DORA compliance ultimately depends on the specific facts of your operations, entity classification, and applicable regulatory technical standards.",
+  "Management remains responsible for ICT risk management, incident reporting, and regulatory engagement.",
+  "We coordinate with legal counsel as needed, but we do not act as attorneys and do not provide legal opinions.",
+  "Where regulatory enforcement, supervisory actions, or complex legal questions arise, qualified legal counsel is required.",
+];
+---
+
+<BaseLayout title="About" description="EU DORA operational resilience readiness for financial sector organizations. Learn about our approach, team, and how to get started.">
+  <section class="content">
+    <h1>About</h1>
+
+    <div class="section">
+      <h2>What We Do</h2>
+      <p>We provide EU DORA operational resilience readiness for financial sector organizations and their ICT service providers. Our service helps CISOs, CROs, compliance officers, and board members navigate DORA requirements with clear frameworks, practical controls, and compliance-ready documentation.</p>
+
+      <p>We work with financial entities and ICT providers subject to DORA &mdash; the organizations where operational resilience readiness is the difference between regulatory confidence and supervisory scrutiny. See <a href="/services">our service packages</a> for details on pricing and deliverables.</p>
+    </div>
+
+    <div class="section">
+      <h2>What We Can Safely Offer</h2>
+      <div class="two-col">
+        <div class="offer-box yes">
+          <h3>We Do</h3>
+          <ul>
+            <li>ICT risk management framework assessment</li>
+            <li>Incident classification and reporting procedures</li>
+            <li>Digital operational resilience testing design</li>
+            <li>Third-party ICT risk management</li>
+            <li>Concentration risk assessment</li>
+            <li>Exit strategy development</li>
+            <li>Information sharing arrangements</li>
+            <li>Regulatory classification support</li>
+          </ul>
+        </div>
+        <div class="offer-box no">
+          <h3>We Do Not</h3>
+          <ul>
+            <li>Provide legal advice or representation</li>
+            <li>Act as regulatory counsel</li>
+            <li>Guarantee regulatory outcomes</li>
+            <li>Represent organizations before ESAs</li>
+            <li>Perform threat-led penetration testing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Staffing and Skillset</h2>
+      <p>Our team covers the six core competencies needed to deliver DORA readiness effectively:</p>
+
+      <div class="staffing-grid">
+        <div class="staff-item">
+          <h4>Resilience Lead</h4>
+          <p>DORA fluency, ESA expectations, and program design for financial sector operational resilience.</p>
+        </div>
+        <div class="staff-item">
+          <h4>ICT Risk Specialist</h4>
+          <p>ICT risk management, business continuity, and disaster recovery for financial infrastructure.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Program Manager</h4>
+          <p>Resilience coordination, third-party oversight, and status reporting across workstreams.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Policy Writer</h4>
+          <p>ICT policies, incident procedures, and testing documentation in regulatory-ready language.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Testing Specialist</h4>
+          <p>Resilience testing program design, TLPT coordination, and scenario development.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Third-Party ICT Specialist</h4>
+          <p>Provider risk assessment, concentration risk analysis, and exit strategy development.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Our Approach</h2>
+      <div class="two-col">
+        <div>
+          <h3>First Version</h3>
+          <ul>
+            <li>Readiness Sprint with ICT risk framework assessment</li>
+            <li>Incident reporting procedures and testing design</li>
+            <li>Third-party ICT register and risk assessment</li>
+            <li>Manual + tool-agnostic by design</li>
+            <li>Executive summary + resilience remediation plan</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Later Maturity</h3>
+          <ul>
+            <li>Automated ICT risk monitoring</li>
+            <li>Continuous resilience testing pipelines</li>
+            <li>Third-party ICT risk dashboards</li>
+            <li>Cross-framework resilience mappings</li>
+            <li>Supervisory reporting automation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Launch Readiness Metrics</h2>
+      <p>We hold ourselves to measurable targets:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Target</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time from kickoff to DORA readiness report</td>
+              <td>15&ndash;20 business days</td>
+            </tr>
+            <tr>
+              <td>ICT risk framework coverage</td>
+              <td>All six DORA risk management areas assessed</td>
+            </tr>
+            <tr>
+              <td>Incident reporting readiness</td>
+              <td>Classification and reporting procedures documented with harmonized templates</td>
+            </tr>
+            <tr>
+              <td>Third-party ICT register completeness</td>
+              <td>100% of ICT arrangements documented with risk classification</td>
+            </tr>
+            <tr>
+              <td>Concentration risk coverage</td>
+              <td>All critical ICT providers assessed for concentration risk</td>
+            </tr>
+            <tr>
+              <td>Testing program readiness</td>
+              <td>Resilience testing strategy documented with TLPT roadmap</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section cta-section">
+      <h2>Get in Touch</h2>
+      <p>Ready to build your DORA compliance program? Reach out to discuss your entity classification, ICT landscape, and goals.</p>
+      <a href="mailto:john@johnboen.com" class="cta-button">Email Us</a>
+    </div>
+
+    <DisclaimerBanner statements={disclaimers} />
+  </section>
+</BaseLayout>
+
+<style>
+  .two-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .offer-box {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+
+  .offer-box.yes {
+    border-color: var(--color-accent);
+  }
+
+  .offer-box.no {
+    border-color: #f59e0b;
+  }
+
+  .offer-box h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .offer-box.yes h3 {
+    color: var(--color-accent);
+  }
+
+  .offer-box.no h3 {
+    color: #f59e0b;
+  }
+
+  .offer-box ul {
+    margin-bottom: 0;
+  }
+
+  .offer-box li {
+    font-size: 0.9rem;
+  }
+
+  .staffing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .staff-item {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+
+  .staff-item h4 {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .staff-item p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+  }
+
+  .cta-section p {
+    max-width: 36rem;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .two-col {
+      grid-template-columns: 1fr;
+    }
+
+    .staffing-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .staffing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -3,7 +3,8 @@
   "name": "EU DORA Readiness",
   "shortDescription": "Help fintech and ICT vendors document operational resilience, incident reporting, and third-party risk",
   "regulation": "EU DORA",
-  "status": "placeholder",
+  "status": "live",
   "order": 11,
-  "category": "governance"
+  "category": "governance",
+  "url": "https://eu-dora.johnboen.com"
 }

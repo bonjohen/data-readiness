@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import ControlCard from '../components/ControlCard.astro';
+import { getCollection } from 'astro:content';
+
+const controls = (await getCollection('controls')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Controls & Evidence" description="12 SOC 2 control domains with requirements, evidence examples, and auditor expectations for technology companies.">
+  <section class="content">
+    <h1>Controls & Evidence</h1>
+
+    <p>A SOC 2 audit evaluates your controls across multiple domains. For each domain, auditors look for evidence that controls are designed properly and operating effectively. Below are the 12 core control domains with minimum requirements and example evidence artifacts.</p>
+
+    <div class="callout">
+      <p><strong>What auditors look for:</strong> Auditors don't just check that policies exist. They verify that controls are operating as described, that evidence is produced on schedule, and that gaps are tracked and remediated. The evidence examples below show what "operating effectiveness" looks like in practice.</p>
+    </div>
+
+    <div class="card-grid">
+      {controls.map((control) => (
+        <ControlCard
+          domain={control.data.domain}
+          description={control.data.description}
+          requirements={control.data.requirements}
+          evidence_examples={control.data.evidence_examples}
+          criteria={control.data.criteria}
+        />
+      ))}
+    </div>
+
+    <div class="section">
+      <h2>Evidence Naming Conventions</h2>
+      <p>Organized, traceable evidence is critical for a smooth audit. While the AICPA does not prescribe a specific naming format, adopting a consistent convention makes evidence retrieval faster and reduces auditor friction.</p>
+
+      <div class="callout">
+        <p><strong>Recommended format:</strong></p>
+        <code>ControlID_System_ArtifactType_YYYY-MM-DD_Period_Owner_v#</code>
+        <p style="margin-top: 0.75rem;"><strong>Example:</strong></p>
+        <code>AC-01_Okta_AccessReview_2026-03-31_Q1_SecurityLead_v1</code>
+      </div>
+
+      <p>Key principles for evidence management:</p>
+      <ul>
+        <li><strong>Centralized repository</strong> with access control and version history</li>
+        <li><strong>Consistent naming</strong> across all control domains and artifact types</li>
+        <li><strong>Defined cadence</strong> for each evidence type: event-driven, monthly, quarterly, or annual</li>
+        <li><strong>Immutable exports</strong> where possible to demonstrate evidence integrity</li>
+      </ul>
+    </div>
+
+    <div class="section callout">
+      <p><strong>AI and data companies:</strong> Standard SOC 2 controls are the baseline. See our <a href="/ai-data">AI-specific advisory modules</a> for additional controls addressing data governance, prompt logging, RAG security, and model vendor risk.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+</style>

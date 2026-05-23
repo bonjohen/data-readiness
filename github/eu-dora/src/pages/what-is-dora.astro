@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+---
+
+<BaseLayout title="What is DORA?" description="Understanding the EU Digital Operational Resilience Act, its five pillars, applicability, and readiness requirements for financial sector organizations.">
+  <section class="content">
+    <h1>What is DORA?</h1>
+
+    <p>DORA (Digital Operational Resilience Act, Regulation EU 2022/2554) establishes a comprehensive framework for ICT risk management in the EU financial sector. Effective January 17, 2025, it creates harmonized requirements for how financial entities manage ICT risk, report incidents, test resilience, and oversee third-party ICT providers.</p>
+
+    <p>DORA applies to credit institutions, investment firms, insurance and reinsurance undertakings, payment institutions, crypto-asset service providers, and their critical ICT third-party providers. It represents the most comprehensive EU framework for digital operational resilience in financial services.</p>
+
+    <div class="section">
+      <h2>The Five Pillars of DORA</h2>
+      <p>DORA is built on five interconnected pillars, each with specific requirements and regulatory technical standards.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Pillar</th>
+              <th>Scope</th>
+              <th>Key Requirements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ICT Risk Management</strong></td>
+              <td>Governance, identification, protection, detection, response/recovery, learning</td>
+              <td>Comprehensive ICT risk management framework with board-level oversight</td>
+            </tr>
+            <tr>
+              <td><strong>ICT Incident Reporting</strong></td>
+              <td>Classification, notification, harmonized templates</td>
+              <td>Report major ICT incidents to competent authorities using standardized formats</td>
+            </tr>
+            <tr>
+              <td><strong>Digital Operational Resilience Testing</strong></td>
+              <td>Basic testing, advanced TLPT</td>
+              <td>Regular testing program; significant entities must conduct threat-led penetration testing</td>
+            </tr>
+            <tr>
+              <td><strong>ICT Third-Party Risk Management</strong></td>
+              <td>Register of arrangements, concentration risk, exit strategies</td>
+              <td>Maintain register of ICT third-party arrangements; manage concentration risk</td>
+            </tr>
+            <tr>
+              <td><strong>Information Sharing</strong></td>
+              <td>Voluntary threat intelligence sharing</td>
+              <td>Arrangements for sharing cyber threat intelligence with other financial entities</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Applicability</h2>
+      <p>DORA applies broadly across the EU financial sector. Understanding whether your organization falls within scope is the first step toward compliance.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Entity Type</th>
+              <th>DORA Applies</th>
+              <th>TLPT Required</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Credit Institutions</strong></td>
+              <td>Yes</td>
+              <td>Significant entities</td>
+            </tr>
+            <tr>
+              <td><strong>Investment Firms</strong></td>
+              <td>Yes</td>
+              <td>Significant entities</td>
+            </tr>
+            <tr>
+              <td><strong>Insurance / Reinsurance</strong></td>
+              <td>Yes</td>
+              <td>Significant entities</td>
+            </tr>
+            <tr>
+              <td><strong>Payment Institutions</strong></td>
+              <td>Yes</td>
+              <td>Significant entities</td>
+            </tr>
+            <tr>
+              <td><strong>Crypto-Asset Service Providers</strong></td>
+              <td>Yes</td>
+              <td>Significant entities</td>
+            </tr>
+            <tr>
+              <td><strong>Critical ICT Third-Party Providers</strong></td>
+              <td>Yes (direct oversight)</td>
+              <td>Per oversight framework</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>ICT Risk Management Framework</h2>
+      <p>DORA requires financial entities to establish a comprehensive ICT risk management framework covering six key areas:</p>
+      <ul>
+        <li><strong>Governance</strong> &mdash; board-level responsibility for ICT risk management, including approval of the ICT risk management framework</li>
+        <li><strong>Identification</strong> &mdash; identify, classify, and document all ICT-supported business functions, information assets, and dependencies</li>
+        <li><strong>Protection</strong> &mdash; implement ICT security policies, access controls, encryption, and network security measures</li>
+        <li><strong>Detection</strong> &mdash; establish mechanisms to detect anomalous activities and ICT incidents promptly</li>
+        <li><strong>Response and Recovery</strong> &mdash; develop ICT business continuity plans, response procedures, and recovery capabilities</li>
+        <li><strong>Learning</strong> &mdash; conduct post-incident reviews, share lessons learned, and continuously improve the framework</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Readiness Assessment Checklist</h2>
+      <p>Before engaging with regulators or auditors, evaluate where your organization stands against these readiness questions:</p>
+
+      <ol class="checklist">
+        <li>Is an ICT risk management framework documented with board-level governance and oversight?</li>
+        <li>Are incident classification and reporting procedures defined using DORA-harmonized templates?</li>
+        <li>Is a resilience testing program in place, including TLPT for significant entities?</li>
+        <li>Is there a complete register of all ICT third-party arrangements?</li>
+        <li>Has a concentration risk assessment been completed for critical ICT third-party providers?</li>
+        <li>Are information sharing arrangements established for cyber threat intelligence?</li>
+      </ol>
+
+      <p>If you can't confidently answer "yes" to most of these, a <a href="/readiness-process">readiness sprint</a> will get you there.</p>
+    </div>
+
+    <div class="section callout">
+      <p><strong>Next step:</strong> See our <a href="/controls-evidence">control domain breakdown</a> to understand what DORA requires across all five pillars, with evidence examples for each.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .checklist {
+    padding-left: 1.5rem;
+  }
+
+  .checklist li {
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .checklist li::marker {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+</style>

@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+---
+
+<BaseLayout title="What is the Safeguards Rule?" description="Understanding the FTC Safeguards Rule, qualified individual requirements, security controls, and readiness requirements for financial institutions.">
+  <section class="content">
+    <h1>What is the FTC Safeguards Rule?</h1>
+
+    <p>The FTC Safeguards Rule (16 CFR Part 314) requires financial institutions under FTC jurisdiction to develop, implement, and maintain a comprehensive information security program to protect customer information. Originally issued in 2003, the rule was substantially amended in 2021, with most provisions taking effect in June 2023. The amendments introduced specific technical requirements that replaced the previous principles-based approach.</p>
+
+    <p>The Safeguards Rule applies to non-banking financial institutions, including: mortgage brokers, motor vehicle dealers, payday lenders, finance companies, account servicers, check cashers, wire transferors, travel agencies, real estate settlement services, tax preparers, and other entities that engage in financial activities under FTC jurisdiction.</p>
+
+    <div class="section">
+      <h2>Key Requirements</h2>
+      <p>The amended Safeguards Rule imposes specific obligations across several areas of information security.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Requirement Area</th>
+              <th>Description</th>
+              <th>Key Provisions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Qualified Individual</strong></td>
+              <td>Designate a person to oversee the security program</td>
+              <td>Internal or external, reports to board, sufficient authority and resources</td>
+            </tr>
+            <tr>
+              <td><strong>Written Information Security Program</strong></td>
+              <td>Document a comprehensive WISP</td>
+              <td>Risk-based, covers all customer information, regularly updated</td>
+            </tr>
+            <tr>
+              <td><strong>Risk Assessment</strong></td>
+              <td>Identify and assess risks to customer information</td>
+              <td>Written assessment, criteria for evaluation, periodic updates</td>
+            </tr>
+            <tr>
+              <td><strong>Access Controls</strong></td>
+              <td>Restrict access to customer information</td>
+              <td>Least privilege, periodic access reviews, authentication controls</td>
+            </tr>
+            <tr>
+              <td><strong>Encryption</strong></td>
+              <td>Encrypt customer information in transit and at rest</td>
+              <td>Industry-standard encryption, key management, qualified individual approval for alternatives</td>
+            </tr>
+            <tr>
+              <td><strong>Multi-Factor Authentication</strong></td>
+              <td>Require MFA for accessing customer information</td>
+              <td>All users accessing customer information systems, remote access</td>
+            </tr>
+            <tr>
+              <td><strong>Secure Development</strong></td>
+              <td>Implement secure software development practices</td>
+              <td>Security testing, code reviews, secure coding standards</td>
+            </tr>
+            <tr>
+              <td><strong>Change Management</strong></td>
+              <td>Control changes to information systems</td>
+              <td>Change approval, testing, rollback procedures</td>
+            </tr>
+            <tr>
+              <td><strong>Incident Response Plan</strong></td>
+              <td>Maintain a written incident response plan</td>
+              <td>Response procedures, roles and responsibilities, communication protocols</td>
+            </tr>
+            <tr>
+              <td><strong>Penetration Testing / Vulnerability Assessment</strong></td>
+              <td>Regularly test security controls</td>
+              <td>Annual penetration testing or continuous monitoring with semi-annual vulnerability assessments</td>
+            </tr>
+            <tr>
+              <td><strong>Board Reporting</strong></td>
+              <td>Report to the board on security program status</td>
+              <td>Annual written report from qualified individual, material matters reporting</td>
+            </tr>
+            <tr>
+              <td><strong>Vendor Management</strong></td>
+              <td>Oversee service providers handling customer information</td>
+              <td>Due diligence, contractual requirements, periodic assessment</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Readiness Assessment Checklist</h2>
+      <p>Before engaging in a full compliance program, evaluate where your organization stands against these six readiness questions:</p>
+
+      <ol class="checklist">
+        <li>Have you designated a qualified individual to oversee your information security program, with documented authority and reporting to the board?</li>
+        <li>Have you conducted a written risk assessment that identifies reasonably foreseeable risks to customer information?</li>
+        <li>Are access controls, multi-factor authentication, and encryption implemented for all systems handling customer information?</li>
+        <li>Do you have a written incident response plan with defined roles, procedures, and communication protocols?</li>
+        <li>Have you implemented a vendor management program with due diligence, contractual requirements, and periodic assessments for service providers?</li>
+        <li>Does your qualified individual provide annual written reports to the board on the overall status of the security program?</li>
+      </ol>
+
+      <p>If you can't confidently answer "yes" to most of these, a <a href="/readiness-process">readiness sprint</a> will get you there.</p>
+    </div>
+
+    <div class="section callout">
+      <p><strong>Next step:</strong> See our <a href="/controls-evidence">control domain breakdown</a> to understand what the FTC expects across all security control areas, with evidence examples for each.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .checklist {
+    padding-left: 1.5rem;
+  }
+
+  .checklist li {
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .checklist li::marker {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+</style>

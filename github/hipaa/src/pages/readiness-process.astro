@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import TimelineDiagram from '../components/TimelineDiagram.astro';
+---
+
+<BaseLayout title="Readiness Process" description="Step-by-step HIPAA Security Rule readiness process, assessment timeline, and deliverables for healthcare technology companies.">
+  <section class="content">
+    <h1>Readiness Process</h1>
+
+    <p>The readiness sprint is a focused 3&ndash;4 week engagement that produces everything you need to demonstrate HIPAA Security Rule compliance: a completed risk analysis, safeguards assessment, BAA tracker, and a clear remediation roadmap.</p>
+
+    <div class="section">
+      <h2>Sprint Timeline</h2>
+      <p>The engagement follows four phases, each building on the outputs of the previous one.</p>
+      <TimelineDiagram />
+    </div>
+
+    <div class="section">
+      <h2>Phase Details</h2>
+
+      <div class="phase-detail">
+        <h3>1. Intake &amp; Scoping <span class="phase-duration">Week 1</span></h3>
+        <p>We start by understanding your ePHI environment, existing safeguards, and business associate relationships.</p>
+        <ul>
+          <li><strong>ePHI inventory and data flow mapping</strong> &mdash; identify where electronic protected health information is created, received, maintained, and transmitted</li>
+          <li><strong>Current safeguards documentation review</strong> &mdash; assess existing policies, procedures, and technical controls</li>
+          <li><strong>Business associate identification</strong> &mdash; catalog all vendors and subcontractors that handle ePHI</li>
+          <li><strong>Risk analysis methodology selection</strong> &mdash; determine the approach for your comprehensive risk analysis</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>2. Assessment <span class="phase-duration">Week 2&ndash;3</span></h3>
+        <p>We evaluate your current safeguards posture across all three Security Rule categories.</p>
+        <ul>
+          <li><strong>Administrative safeguards evaluation</strong> &mdash; review policies, training, incident procedures, contingency plans, and BAAs</li>
+          <li><strong>Physical safeguards walkthrough</strong> &mdash; assess facility access, workstation security, and device controls</li>
+          <li><strong>Technical controls assessment</strong> &mdash; evaluate access controls, audit logging, encryption, authentication, and transmission security</li>
+          <li><strong>BAA completeness review</strong> &mdash; verify that all business associate agreements are current, complete, and properly executed</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>3. Outputs <span class="phase-duration">Week 3&ndash;4</span></h3>
+        <p>We deliver the artifacts that define your path to HIPAA Security Rule compliance.</p>
+        <ul>
+          <li><strong>Risk analysis report</strong> &mdash; comprehensive threat and vulnerability assessment with risk ratings</li>
+          <li><strong>Safeguards gap register</strong> &mdash; every safeguard mapped to Security Rule standards, with gaps ranked by risk</li>
+          <li><strong>BAA templates and tracker</strong> &mdash; standardized BAA language and a tracking system for all business associate relationships</li>
+          <li><strong>Remediation roadmap with risk ranking</strong> &mdash; prioritized plan to close gaps based on risk severity and implementation complexity</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>4. Follow-on <span class="phase-duration">Ongoing</span></h3>
+        <p>After the readiness sprint, maintaining compliance requires ongoing attention to your security program.</p>
+        <ul>
+          <li><strong>Annual risk analysis updates</strong> &mdash; refresh the risk analysis to account for new threats, vulnerabilities, and system changes</li>
+          <li><strong>Workforce security training</strong> &mdash; regular training programs with documented completion and comprehension</li>
+          <li><strong>Contingency plan testing</strong> &mdash; periodic testing of backup, disaster recovery, and emergency mode operation plans</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Sprint Deliverables</h2>
+      <p>Every readiness sprint produces these minimum deliverables:</p>
+      <div class="deliverables-grid">
+        <div class="deliverable-item">ePHI inventory and data flow map</div>
+        <div class="deliverable-item">Risk analysis report</div>
+        <div class="deliverable-item">Administrative safeguards assessment</div>
+        <div class="deliverable-item">Physical safeguards assessment</div>
+        <div class="deliverable-item">Technical controls assessment</div>
+        <div class="deliverable-item">BAA tracker and templates</div>
+        <div class="deliverable-item">Gap register with risk ranking</div>
+        <div class="deliverable-item">Remediation roadmap</div>
+      </div>
+    </div>
+
+    <div class="section cta-section">
+      <h2>Start Your Readiness Sprint</h2>
+      <p>Most companies complete the readiness sprint in 3&ndash;4 weeks. The result is a clear, actionable plan to achieve HIPAA Security Rule compliance.</p>
+      <a href="/about" class="cta-button">Get in Touch</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .phase-detail {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .phase-detail h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .phase-duration {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.125rem 0.5rem;
+  }
+
+  .phase-detail ul {
+    margin-bottom: 0;
+  }
+
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .deliverable-item {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: var(--color-heading);
+  }
+
+  .deliverable-item::before {
+    content: '\2713';
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+    font-weight: 700;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+  }
+
+  .cta-section p {
+    max-width: 36rem;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .deliverables-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

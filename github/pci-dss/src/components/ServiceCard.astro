@@ -1,0 +1,88 @@
+---
+interface Props {
+  name: string;
+  duration: string;
+  price_range: string;
+  deliverables: string[];
+  ctaHref: string;
+}
+
+const { name, duration, price_range, deliverables, ctaHref } = Astro.props;
+---
+
+<article class="card service-card">
+  <h3>{name}</h3>
+  <span class="duration-badge">{duration}</span>
+  <p class="price-range">
+    <strong>Estimated range:</strong> {price_range}
+  </p>
+  <p class="price-note">Market-informed estimate — actual pricing depends on scope and complexity.</p>
+  <h4>Deliverables</h4>
+  <ul class="deliverables-list">
+    {deliverables.map((d) => (
+      <li>{d}</li>
+    ))}
+  </ul>
+  <a href={ctaHref} class="cta-button">Get Started</a>
+</article>
+
+<style>
+  .service-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .duration-badge {
+    display: inline-block;
+    background: var(--color-bg);
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+
+  .price-range {
+    font-size: 1.1rem;
+    color: var(--color-heading);
+    margin-bottom: 0.25rem;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h4 {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .deliverables-list {
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .deliverables-list li {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .service-card .cta-button {
+    align-self: flex-start;
+    font-size: 0.9rem;
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+interface Props {
+  statements: string[];
+}
+
+const { statements } = Astro.props;
+---
+
+<aside class="callout disclaimer-banner">
+  <h3 class="disclaimer-heading">Important Disclaimers</h3>
+  {statements.map((s) => (
+    <p>{s}</p>
+  ))}
+</aside>
+
+<style>
+  .disclaimer-banner {
+    margin-top: 2rem;
+  }
+
+  .disclaimer-heading {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+
+  .disclaimer-banner p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .disclaimer-banner p:last-child {
+    margin-bottom: 0;
+  }
+</style>

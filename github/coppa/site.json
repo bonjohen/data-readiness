@@ -3,7 +3,8 @@
   "name": "COPPA Readiness",
   "shortDescription": "Help children-facing websites and apps review data collection, parental consent flows, and vendor handling",
   "regulation": "COPPA",
-  "status": "placeholder",
+  "status": "live",
   "order": 3,
-  "category": "privacy"
+  "category": "privacy",
+  "url": "https://coppa.johnboen.com"
 }

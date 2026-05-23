@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import DisclaimerBanner from '../components/DisclaimerBanner.astro';
+
+const disclaimers = [
+  "We provide security readiness, remediation, and audit support. We do not issue compliance certifications or regulatory opinions.",
+  "NY SHIELD Act compliance is the responsibility of the business holding private information. We assist with readiness but do not make compliance determinations.",
+  "Management remains responsible for implementing reasonable safeguards, maintaining the data security program, and complying with breach notification requirements.",
+  "We coordinate with regulators as requested, but we do not represent organizations before the NY Attorney General.",
+  "Where legal, regulatory, or enforcement-related questions arise, legal counsel experienced in New York data security law may be required in addition to readiness support.",
+];
+---
+
+<BaseLayout title="About" description="NY SHIELD Act readiness consulting for technology companies. Learn about our approach, team, and how to get started.">
+  <section class="content">
+    <h1>About</h1>
+
+    <div class="section">
+      <h2>What We Do</h2>
+      <p>We provide NY SHIELD Act readiness for businesses handling New York residents' private information. Our service helps CTOs, security leads, and compliance officers navigate the path from "we need SHIELD Act compliance" to "we have documented safeguards and defensible breach notification procedures" with clear scope, practical controls, and organized documentation.</p>
+
+      <p>We work with technology companies, SaaS providers, and data-driven businesses of all sizes &mdash; the organizations where SHIELD Act compliance is the difference between operating confidently in the New York market and facing AG enforcement risk.</p>
+    </div>
+
+    <div class="section">
+      <h2>What We Can Safely Offer</h2>
+      <div class="two-col">
+        <div class="offer-box yes">
+          <h3>We Do</h3>
+          <ul>
+            <li>Data security program assessments</li>
+            <li>Administrative safeguards design</li>
+            <li>Technical safeguards evaluation</li>
+            <li>Physical safeguards review</li>
+            <li>Breach notification procedure development</li>
+            <li>Service provider contract review</li>
+            <li>Employee training program design</li>
+            <li>Small business safe harbor evaluation</li>
+          </ul>
+        </div>
+        <div class="offer-box no">
+          <h3>We Do Not</h3>
+          <ul>
+            <li>Provide legal advice or representation</li>
+            <li>Issue compliance certifications</li>
+            <li>Guarantee regulatory outcomes</li>
+            <li>Represent organizations before the NY AG</li>
+            <li>File breach notifications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Staffing and Skillset</h2>
+      <p>Our team covers the six core competencies needed to deliver NY SHIELD Act readiness effectively:</p>
+
+      <div class="staffing-grid">
+        <div class="staff-item">
+          <h4>Security Lead</h4>
+          <p>SHIELD Act fluency, NY AG enforcement expectations, and program design. Owns scoping, safeguards mapping, and executive communication.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Technical Security</h4>
+          <p>Network assessment, data protection, and intrusion detection. Converts technical safeguard requirements into workable implementations.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Program Manager</h4>
+          <p>Safeguards coordination, service provider oversight, status reporting, and stakeholder follow-up across the readiness engagement.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Policy Writer</h4>
+          <p>Data security program documentation, breach notification procedures, and training materials that meet statutory requirements.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Risk Assessment Specialist</h4>
+          <p>Information storage risks, disposal risks, and access risks. Produces the risk assessment that anchors the data security program.</p>
+        </div>
+        <div class="staff-item">
+          <h4>Service Provider Specialist</h4>
+          <p>Contract requirements, due diligence, and ongoing monitoring of service provider safeguard compliance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Our Approach</h2>
+      <div class="two-col">
+        <div>
+          <h3>First Version</h3>
+          <ul>
+            <li>Readiness Sprint with safeguard gap analysis</li>
+            <li>Breach notification playbook and vendor contract addenda</li>
+            <li>Remediation backlog and compliance tracker</li>
+            <li>Manual + tool-agnostic by design</li>
+            <li>Executive summary + engineering remediation plan</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Later Maturity</h3>
+          <ul>
+            <li>Automated safeguard monitoring and intrusion detection</li>
+            <li>Multi-framework mappings (SHIELD Act + CCPA + state privacy patchwork)</li>
+            <li>Continuous compliance health dashboard</li>
+            <li>Breach notification workflow automation</li>
+            <li>Vendor compliance tracking and management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Launch Readiness Metrics</h2>
+      <p>We hold ourselves to measurable targets:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Target</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time from kickoff to scoped readiness report</td>
+              <td>15&ndash;20 business days</td>
+            </tr>
+            <tr>
+              <td>Private information inventory completeness</td>
+              <td>100% of data categories identified and mapped</td>
+            </tr>
+            <tr>
+              <td>Safeguard gap analysis coverage</td>
+              <td>100% of statutory safeguards assessed with owners assigned</td>
+            </tr>
+            <tr>
+              <td>Breach notification playbook readiness</td>
+              <td>Complete playbook with AG/DFS/DOCS notification procedures</td>
+            </tr>
+            <tr>
+              <td>Service provider contract coverage</td>
+              <td>90%+ of service providers with safeguard contract language</td>
+            </tr>
+            <tr>
+              <td>Remediation roadmap deliverability</td>
+              <td>One executive summary + one engineering backlog per engagement</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section cta-section">
+      <h2>Get in Touch</h2>
+      <p>Ready to start your SHIELD Act readiness journey? Reach out to discuss your scope, timeline, and goals.</p>
+      <a href="mailto:john@johnboen.com" class="cta-button">Email Us</a>
+    </div>
+
+    <DisclaimerBanner statements={disclaimers} />
+  </section>
+</BaseLayout>
+
+<style>
+  .two-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .offer-box {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+
+  .offer-box.yes {
+    border-color: var(--color-accent);
+  }
+
+  .offer-box.no {
+    border-color: #f59e0b;
+  }
+
+  .offer-box h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .offer-box.yes h3 {
+    color: var(--color-accent);
+  }
+
+  .offer-box.no h3 {
+    color: #f59e0b;
+  }
+
+  .offer-box ul {
+    margin-bottom: 0;
+  }
+
+  .offer-box li {
+    font-size: 0.9rem;
+  }
+
+  .staffing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .staff-item {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+
+  .staff-item h4 {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .staff-item p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+  }
+
+  .cta-section p {
+    max-width: 36rem;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .two-col {
+      grid-template-columns: 1fr;
+    }
+
+    .staffing-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .staffing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
