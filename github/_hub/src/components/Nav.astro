@@ -1,0 +1,158 @@
+---
+import { SITE } from '../config';
+const pathname = Astro.url.pathname;
+---
+<nav>
+  <div class="nav-container">
+    <a href="/" class="nav-brand">{SITE.title}</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+      <span></span>
+    </label>
+    <ul class="nav-links">
+      <li><a href="/" aria-current={pathname === '/' ? 'page' : undefined}>Home</a></li>
+      <li><a href="/about" aria-current={pathname === '/about' || pathname === '/about/' ? 'page' : undefined}>About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-page);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.5rem;
+  }
+
+  .nav-brand {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-heading);
+    text-decoration: none;
+  }
+
+  .nav-brand:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: var(--color-text);
+    position: relative;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+
+  .nav-toggle-label span::before {
+    top: -0.5rem;
+  }
+
+  .nav-toggle-label span::after {
+    top: 0.5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .nav-links a[aria-current="page"] {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle-label {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 3.5rem;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1rem var(--spacing-page);
+      gap: 0;
+    }
+
+    .nav-links li {
+      margin: 0;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 0.75rem 0;
+      border-bottom: none;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+      display: flex;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span {
+      background: transparent;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+</style>

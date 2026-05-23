@@ -14,13 +14,13 @@ status: "open"
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| 01.1 | Open | | | Create `src/components/BaseLayout.astro` — html/head/body wrapper with title, description, ogImage props; imports global.css; skip-to-content link; renders Nav, main slot, Footer (PDR §4.1) |
-| 01.2 | Open | | | Create `src/components/Nav.astro` — sticky nav with Home and About links, CSS-only hamburger at ≤768px, `aria-current="page"` active state, keyboard navigable (PDR §4.2) |
-| 01.3 | Open | | | Create `src/components/Footer.astro` — disclaimer text, copyright with dynamic year from SITE config (PDR §4.3) |
-| 01.4 | Open | | | Create `src/components/HeroSection.astro` — headline `<h1>`, subheadline `<p>`, optional CTA link, dark gradient background (PDR §4.4) |
-| 01.5 | Open | | | Create placeholder `src/pages/index.astro` using BaseLayout with HeroSection to verify all components render |
-| 01.6 | Open | | | Create `src/pages/404.astro` — error heading, message, home link (PDR §5.3) |
-| 01.7 | Open | | | Verify: `npx astro dev` renders placeholder index and 404; nav links work; hamburger toggles at ≤768px; skip-link focuses main content |
+| 01.1 | Completed | 2026-05-23 07:02 PM | 2026-05-23 07:03 PM | Create `src/components/BaseLayout.astro` — html/head/body wrapper with title, description, ogImage props; imports global.css; skip-to-content link; renders Nav, main slot, Footer (PDR §4.1) |
+| 01.2 | Completed | 2026-05-23 07:03 PM | 2026-05-23 07:04 PM | Create `src/components/Nav.astro` — sticky nav with Home and About links, CSS-only hamburger at ≤768px, `aria-current="page"` active state, keyboard navigable (PDR §4.2) |
+| 01.3 | Completed | 2026-05-23 07:04 PM | 2026-05-23 07:05 PM | Create `src/components/Footer.astro` — disclaimer text, copyright with dynamic year from SITE config (PDR §4.3) |
+| 01.4 | Completed | 2026-05-23 07:04 PM | 2026-05-23 07:05 PM | Create `src/components/HeroSection.astro` — headline `<h1>`, subheadline `<p>`, optional CTA link, dark gradient background (PDR §4.4) |
+| 01.5 | Completed | 2026-05-23 07:05 PM | 2026-05-23 07:06 PM | Create placeholder `src/pages/index.astro` using BaseLayout with HeroSection to verify all components render |
+| 01.6 | Completed | 2026-05-23 07:05 PM | 2026-05-23 07:06 PM | Create `src/pages/404.astro` — error heading, message, home link (PDR §5.3) |
+| 01.7 | Completed | 2026-05-23 07:06 PM | 2026-05-23 07:06 PM | Verify: `npx astro dev` renders placeholder index and 404; nav links work; hamburger toggles at ≤768px; skip-link focuses main content |
 
 ## Context
 
@@ -211,7 +211,5 @@ import BaseLayout from '../components/BaseLayout.astro';
 
 ## Phase Summary
 
-_To be filled after completion._
-
-- **Changes:** TBD
-- **Commit:** TBD
+- **Changes:** Created `src/components/BaseLayout.astro` (html/head/body wrapper with SEO meta, skip-link, Nav, Footer), `src/components/Nav.astro` (sticky nav, CSS-only hamburger, aria-current active state), `src/components/Footer.astro` (disclaimer, dynamic copyright year), `src/components/HeroSection.astro` (headline, subheadline, optional CTA with gradient background), `src/pages/index.astro` (placeholder home with hero), `src/pages/404.astro` (error page with home link). Build verified — 2 pages built successfully.
+- **Commit:** `Phase 01: Core Components — BaseLayout, Nav, Footer, HeroSection, placeholder pages`
