@@ -1,0 +1,9 @@
+{
+  "id": "sec-cyber",
+  "name": "SEC Cybersecurity Disclosure Readiness",
+  "shortDescription": "Help public or pre-IPO companies document cyber-risk governance and incident materiality workflows",
+  "regulation": "SEC Cybersecurity Disclosure",
+  "status": "placeholder",
+  "order": 9,
+  "category": "governance"
+}

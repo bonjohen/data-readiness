@@ -1,0 +1,9 @@
+{
+  "id": "ftc-safeguards",
+  "name": "FTC Safeguards Rule Readiness",
+  "shortDescription": "Help non-bank financial-service businesses build information security programs and risk assessments",
+  "regulation": "FTC Safeguards Rule",
+  "status": "placeholder",
+  "order": 4,
+  "category": "security"
+}

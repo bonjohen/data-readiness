@@ -1,0 +1,9 @@
+{
+  "id": "gdpr",
+  "name": "GDPR Operational Readiness",
+  "shortDescription": "Help U.S. SaaS companies identify controller/processor roles, map data flows, and document lawful processing",
+  "regulation": "GDPR",
+  "status": "placeholder",
+  "order": 2,
+  "category": "privacy"
+}

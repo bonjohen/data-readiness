@@ -1,0 +1,9 @@
+{
+  "id": "pci-dss",
+  "name": "PCI DSS v4.0.1 Readiness",
+  "shortDescription": "Help companies that touch payment-card data reduce scope and document cardholder-data flows",
+  "regulation": "PCI DSS v4.0.1",
+  "status": "placeholder",
+  "order": 6,
+  "category": "security"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "hipaa",
+  "name": "HIPAA Security Rule Readiness",
+  "shortDescription": "Help health-tech vendors document ePHI safeguards, access controls, audit logging, and risk analysis",
+  "regulation": "HIPAA Security Rule",
+  "status": "placeholder",
+  "order": 5,
+  "category": "security"
+}

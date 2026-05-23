@@ -1,0 +1,9 @@
+{
+  "id": "ny-shield",
+  "name": "NY SHIELD Act Readiness",
+  "shortDescription": "Help companies holding New York resident data create reasonable security programs and breach-response procedures",
+  "regulation": "NY SHIELD Act",
+  "status": "placeholder",
+  "order": 7,
+  "category": "security"
+}

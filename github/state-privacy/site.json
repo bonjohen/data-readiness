@@ -1,0 +1,9 @@
+{
+  "id": "state-privacy",
+  "name": "State Privacy Law Patchwork",
+  "shortDescription": "Help companies build reusable privacy operations for Virginia, Colorado, Texas, and similar state laws",
+  "regulation": "State Privacy Laws",
+  "status": "placeholder",
+  "order": 8,
+  "category": "privacy"
+}

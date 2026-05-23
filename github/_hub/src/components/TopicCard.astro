@@ -1,0 +1,91 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  shortDescription: string;
+  regulation: string;
+  status: 'live' | 'placeholder';
+  url?: string;
+  order: number;
+  category: string;
+  icon?: string;
+}
+
+const { name, shortDescription, status, url, category } = Astro.props;
+const isLive = status === 'live';
+---
+{isLive && url ? (
+  <a href={url} class="topic-card-link">
+    <article class="card topic-card topic-card-live">
+      <div class="topic-card-badges">
+        <span class="badge">{category}</span>
+        <span class="badge-live">Live</span>
+      </div>
+      <h3>{name}</h3>
+      <p>{shortDescription}</p>
+    </article>
+  </a>
+) : (
+  <article class="card topic-card topic-card-placeholder">
+    <div class="topic-card-badges">
+      <span class="badge">{category}</span>
+      <span class="badge-coming-soon">Coming Soon</span>
+    </div>
+    <h3>{name}</h3>
+    <p>{shortDescription}</p>
+  </article>
+)}
+
+<style>
+  .topic-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .topic-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .topic-card {
+    height: 100%;
+  }
+
+  .topic-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .topic-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+  }
+
+  .topic-card-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .topic-card-placeholder {
+    opacity: 0.7;
+  }
+
+  .topic-card-placeholder:hover {
+    box-shadow: var(--shadow-card);
+    border-color: var(--color-border);
+  }
+
+  .topic-card-live {
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  }
+
+  .topic-card-link:hover .topic-card-live {
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+</style>

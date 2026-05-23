@@ -100,21 +100,19 @@ Open  ──>  Started  ──>  Completed
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| 02.1 | Open | | | Create `src/data/topic-schema.ts` — Zod schema with id regex, min/max constraints, live-requires-url refine (PDR §2.1) |
-| 02.2 | Open | | | Create `src/data/discover-topics.ts` — fs-based discovery of `github/*/site.json`, parse, validate, sort by order, warn on invalid/duplicate, return TopicManifest[] (PDR §6.1) |
-| 02.3 | Open | | | Create `site.json` placeholder manifests for all 12 topics in their respective `github/{topic}/` folders (create folders as needed). All status: placeholder. Content per PDR §2.3 |
-| 02.4 | Open | | | Create `src/components/TopicCard.astro` — card with name heading, shortDescription, category badge, status badge (live/coming-soon), conditional `<a>` wrapper for live topics, muted opacity for placeholder, hover effect for live only (PDR §4.5) |
-| 02.5 | Open | | | Update `src/pages/index.astro` — import discoverTopics, map to TopicCard grid. CSS grid: 3-col desktop, 2-col tablet, 1-col mobile (PDR §5.1) |
-| 02.6 | Open | | | Verify: `npx astro dev` shows 12 topic cards sorted by order; placeholder cards show amber badge, no link, muted style; console shows no warnings for valid manifests |
+| 02.1 | Completed | 2026-05-23 07:07 PM | 2026-05-23 07:07 PM | Create `src/data/topic-schema.ts` — Zod schema with id regex, min/max constraints, live-requires-url refine (PDR §2.1) |
+| 02.2 | Completed | 2026-05-23 07:07 PM | 2026-05-23 07:08 PM | Create `src/data/discover-topics.ts` — fs-based discovery of `github/*/site.json`, parse, validate, sort by order, warn on invalid/duplicate, return TopicManifest[] (PDR §6.1) |
+| 02.3 | Completed | 2026-05-23 07:08 PM | 2026-05-23 07:09 PM | Create `site.json` placeholder manifests for all 12 topics in their respective `github/{topic}/` folders (create folders as needed). All status: placeholder. Content per PDR §2.3 |
+| 02.4 | Completed | 2026-05-23 07:09 PM | 2026-05-23 07:10 PM | Create `src/components/TopicCard.astro` — card with name heading, shortDescription, category badge, status badge (live/coming-soon), conditional `<a>` wrapper for live topics, muted opacity for placeholder, hover effect for live only (PDR §4.5) |
+| 02.5 | Completed | 2026-05-23 07:10 PM | 2026-05-23 07:10 PM | Update `src/pages/index.astro` — import discoverTopics, map to TopicCard grid. CSS grid: 3-col desktop, 2-col tablet, 1-col mobile (PDR §5.1) |
+| 02.6 | Completed | 2026-05-23 07:10 PM | 2026-05-23 07:11 PM | Verify: `npx astro dev` shows 12 topic cards sorted by order; placeholder cards show amber badge, no link, muted style; console shows no warnings for valid manifests |
 
 <!-- Added during finalization: task 02.3 creates all 12 topic folders and manifests upfront so the catalog is populated from the start (US-001). Task 02.6 added for build-time discovery verification. -->
 
 ### Phase 02 Summary
 
-_To be filled after completion._
-
-- **Changes:** TBD
-- **Commit:** TBD
+- **Changes:** Created `src/data/topic-schema.ts` (Zod manifest schema), `src/data/discover-topics.ts` (fs-based build-time discovery with validation, sorting, dedup), `src/components/TopicCard.astro` (card with category/status badges, live/placeholder states). Created `site.json` manifests for all 12 topics in `github/{topic}/` folders. Updated `src/pages/index.astro` with topic grid (3/2/1-col responsive). Fixed PDR path resolution bug in discover-topics.ts. Build verified — 12 cards rendered correctly.
+- **Commit:** `Phase 02: Topic Discovery & TopicCard — manifest schema, discovery module, 12 topic manifests, card grid`
 
 ## Phase 03: Content Pages
 

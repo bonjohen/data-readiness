@@ -1,0 +1,9 @@
+{
+  "id": "coppa",
+  "name": "COPPA Readiness",
+  "shortDescription": "Help children-facing websites and apps review data collection, parental consent flows, and vendor handling",
+  "regulation": "COPPA",
+  "status": "placeholder",
+  "order": 3,
+  "category": "privacy"
+}

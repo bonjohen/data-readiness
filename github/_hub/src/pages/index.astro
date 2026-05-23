@@ -1,6 +1,10 @@
 ---
 import BaseLayout from '../components/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
+import TopicCard from '../components/TopicCard.astro';
+import { discoverTopics } from '../data/discover-topics';
+
+const topics = discoverTopics();
 ---
 <BaseLayout title="Home" description="Regulatory compliance readiness for technology companies">
   <HeroSection
@@ -10,6 +14,38 @@ import HeroSection from '../components/HeroSection.astro';
     ctaHref="#topics"
   />
   <section class="container" id="topics">
-    <p>Topic catalog will appear here in Phase 02.</p>
+    <h2>Regulation Topics</h2>
+    <div class="topic-grid">
+      {topics.map((topic) => <TopicCard {...topic} />)}
+    </div>
   </section>
 </BaseLayout>
+
+<style>
+  #topics {
+    padding: var(--spacing-section) var(--spacing-page);
+  }
+
+  #topics h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .topic-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .topic-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
