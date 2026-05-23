@@ -146,16 +146,16 @@ export const collections = {
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| C.1 | Open | | | Create `github/soc2/src/components/BaseLayout.astro` — html/head/body wrapper with title, description, ogImage props; imports global.css, Nav, Footer; skip-link; CSP meta tag (from hub's BaseLayout pattern + reference `c:\projects\soc2\src\components\BaseLayout.astro`) |
-| C.2 | Open | | | Create `github/soc2/src/components/Nav.astro` — sticky nav with 7 page links (What is SOC 2?, Process, Controls, AI & Data, Services, Tools, About), CSS-only hamburger, aria-current active state (from reference `c:\projects\soc2\src\components\Nav.astro`) |
-| C.3 | Open | | | Create `github/soc2/src/components/Footer.astro` — disclaimer text, copyright with dynamic year (from reference) |
-| C.4 | Open | | | Create `github/soc2/src/components/HeroSection.astro` — headline, subheadline, CTA link, gradient background (from reference) |
-| C.5 | Open | | | Create `github/soc2/src/components/ControlCard.astro` — domain heading with criteria tags, description, requirements list, evidence table. Props: domain, description, requirements[], evidence_examples[], criteria[] (from reference `c:\projects\soc2\src\components\ControlCard.astro`) |
-| C.6 | Open | | | Create `github/soc2/src/components/ServiceCard.astro` — name, duration badge, price range, deliverables list, CTA. Props: name, duration, price_range, deliverables[], ctaHref (from reference) |
-| C.7 | Open | | | Create `github/soc2/src/components/ToolCard.astro` — name + category badge, good-fit section, cautions section. Props: name, category, good_fit, cautions (from reference) |
-| C.8 | Open | | | Create `github/soc2/src/components/AdvisoryCard.astro` — module name, credibility note, additions list. Props: module_name, why_credible, additions[] (from reference) |
-| C.9 | Open | | | Create `github/soc2/src/components/TimelineDiagram.astro` — 4-phase sprint timeline with numbered markers, duration badges, activity lists; horizontal desktop, vertical mobile (from reference) |
-| C.10 | Open | | | Create `github/soc2/src/components/DisclaimerBanner.astro` — "Important Disclaimers" heading with statements list. Props: statements[] (from reference) |
+| C.1 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/BaseLayout.astro` — html/head/body wrapper with title, description, ogImage props; imports global.css, Nav, Footer; skip-link; CSP meta tag (from hub's BaseLayout pattern + reference `c:\projects\soc2\src\components\BaseLayout.astro`) |
+| C.2 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/Nav.astro` — sticky nav with 7 page links (What is SOC 2?, Process, Controls, AI & Data, Services, Tools, About), CSS-only hamburger, aria-current active state (from reference `c:\projects\soc2\src\components\Nav.astro`) |
+| C.3 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/Footer.astro` — disclaimer text, copyright with dynamic year (from reference) |
+| C.4 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/HeroSection.astro` — headline, subheadline, CTA link, gradient background (from reference) |
+| C.5 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/ControlCard.astro` — domain heading with criteria tags, description, requirements list, evidence table. Props: domain, description, requirements[], evidence_examples[], criteria[] (from reference `c:\projects\soc2\src\components\ControlCard.astro`) |
+| C.6 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/ServiceCard.astro` — name, duration badge, price range, deliverables list, CTA. Props: name, duration, price_range, deliverables[], ctaHref (from reference) |
+| C.7 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/ToolCard.astro` — name + category badge, good-fit section, cautions section. Props: name, category, good_fit, cautions (from reference) |
+| C.8 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/AdvisoryCard.astro` — module name, credibility note, additions list. Props: module_name, why_credible, additions[] (from reference) |
+| C.9 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/TimelineDiagram.astro` — 4-phase sprint timeline with numbered markers, duration badges, activity lists; horizontal desktop, vertical mobile (from reference) |
+| C.10 | Completed | 2026-05-23 07:38 PM | 2026-05-23 07:39 PM | Create `github/soc2/src/components/DisclaimerBanner.astro` — "Important Disclaimers" heading with statements list. Props: statements[] (from reference) |
 
 <details>
 <summary>Phase 010-C Context</summary>
@@ -230,10 +230,8 @@ const phases = [
 
 ### Phase 010-C Summary
 
-_To be filled after completion._
-
-- **Changes:** TBD
-- **Commit:** TBD
+- **Changes:** Copied all 10 Astro components from reference project: BaseLayout, Nav, Footer, HeroSection, ControlCard, ServiceCard, ToolCard, AdvisoryCard, TimelineDiagram, DisclaimerBanner. Added CSP meta tag to BaseLayout for security consistency with hub.
+- **Commit:** `Phase 010-C: SOC 2 components — 10 Astro components with CSP meta tag`
 
 ---
 
