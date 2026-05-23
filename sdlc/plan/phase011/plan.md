@@ -5,7 +5,7 @@ depends_on: "Phase 010"
 goal: "Every placeholder topic site has regulation-accurate content collections (controls, advisory, services, tools) as markdown files, matching the SOC 2 content model. Each site is buildable and ready for scaffold integration."
 source_pdr_sections: ["2.3", "6.1"]
 source_user_stories: ["US-003", "US-006", "US-008"]
-status: "open"
+status: "completed"
 ---
 
 # Phase 011: Topic Site Content Development — All 11 Regulations
@@ -75,11 +75,11 @@ Each phase produces the content files for one regulation. Phases are ordered by 
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| A.1 | Open | | | Create `github/cppa/src/content/config.ts` — identical schema to SOC 2 (controlSchema, advisorySchema, serviceSchema, toolSchema) |
-| A.2 | Open | | | Create controls collection (`github/cppa/src/content/controls/`) — 10 files |
-| A.3 | Open | | | Create advisory collection (`github/cppa/src/content/advisory/`) — 7 files |
-| A.4 | Open | | | Create services collection (`github/cppa/src/content/services/`) — 4 files |
-| A.5 | Open | | | Create tools collection (`github/cppa/src/content/tools/`) — 15 files |
+| A.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/cppa/src/content/config.ts` — identical schema to SOC 2 (controlSchema, advisorySchema, serviceSchema, toolSchema) |
+| A.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/cppa/src/content/controls/`) — 10 files |
+| A.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/cppa/src/content/advisory/`) — 7 files |
+| A.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/cppa/src/content/services/`) — 4 files |
+| A.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/cppa/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-A Context — CCPA/CPRA Control Domains</summary>
@@ -116,11 +116,11 @@ Each control should have 2–4 evidence examples with realistic artifacts, owner
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| B.1 | Open | | | Create `github/gdpr/src/content/config.ts` |
-| B.2 | Open | | | Create controls collection (`github/gdpr/src/content/controls/`) — 12 files |
-| B.3 | Open | | | Create advisory collection (`github/gdpr/src/content/advisory/`) — 7 files |
-| B.4 | Open | | | Create services collection (`github/gdpr/src/content/services/`) — 4 files |
-| B.5 | Open | | | Create tools collection (`github/gdpr/src/content/tools/`) — 15 files |
+| B.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/gdpr/src/content/config.ts` |
+| B.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/gdpr/src/content/controls/`) — 12 files |
+| B.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/gdpr/src/content/advisory/`) — 7 files |
+| B.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/gdpr/src/content/services/`) — 4 files |
+| B.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/gdpr/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-B Context — GDPR Control Domains</summary>
@@ -156,11 +156,11 @@ Each control should have 2–4 evidence examples with realistic artifacts, owner
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| C.1 | Open | | | Create `github/coppa/src/content/config.ts` |
-| C.2 | Open | | | Create controls collection (`github/coppa/src/content/controls/`) — 8 files |
-| C.3 | Open | | | Create advisory collection (`github/coppa/src/content/advisory/`) — 7 files |
-| C.4 | Open | | | Create services collection (`github/coppa/src/content/services/`) — 4 files |
-| C.5 | Open | | | Create tools collection (`github/coppa/src/content/tools/`) — 15 files |
+| C.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/coppa/src/content/config.ts` |
+| C.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/coppa/src/content/controls/`) — 8 files |
+| C.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/coppa/src/content/advisory/`) — 7 files |
+| C.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/coppa/src/content/services/`) — 4 files |
+| C.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/coppa/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-C Context — COPPA Control Domains</summary>
@@ -192,11 +192,11 @@ Each control should have 2–4 evidence examples with realistic artifacts, owner
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| D.1 | Open | | | Create `github/ftc-safeguards/src/content/config.ts` |
-| D.2 | Open | | | Create controls collection (`github/ftc-safeguards/src/content/controls/`) — 11 files |
-| D.3 | Open | | | Create advisory collection (`github/ftc-safeguards/src/content/advisory/`) — 7 files |
-| D.4 | Open | | | Create services collection (`github/ftc-safeguards/src/content/services/`) — 4 files |
-| D.5 | Open | | | Create tools collection (`github/ftc-safeguards/src/content/tools/`) — 15 files |
+| D.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/ftc-safeguards/src/content/config.ts` |
+| D.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/ftc-safeguards/src/content/controls/`) — 11 files |
+| D.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/ftc-safeguards/src/content/advisory/`) — 7 files |
+| D.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/ftc-safeguards/src/content/services/`) — 4 files |
+| D.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/ftc-safeguards/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-D Context — FTC Safeguards Control Domains</summary>
@@ -231,11 +231,11 @@ Each control should have 2–4 evidence examples with realistic artifacts, owner
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| E.1 | Open | | | Create `github/hipaa/src/content/config.ts` |
-| E.2 | Open | | | Create controls collection (`github/hipaa/src/content/controls/`) — 10 files |
-| E.3 | Open | | | Create advisory collection (`github/hipaa/src/content/advisory/`) — 7 files |
-| E.4 | Open | | | Create services collection (`github/hipaa/src/content/services/`) — 4 files |
-| E.5 | Open | | | Create tools collection (`github/hipaa/src/content/tools/`) — 15 files |
+| E.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/hipaa/src/content/config.ts` |
+| E.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/hipaa/src/content/controls/`) — 10 files |
+| E.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/hipaa/src/content/advisory/`) — 7 files |
+| E.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/hipaa/src/content/services/`) — 4 files |
+| E.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/hipaa/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-E Context — HIPAA Security Rule Control Domains</summary>
@@ -271,11 +271,11 @@ Each control should have 2–4 evidence examples with realistic artifacts, owner
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| F.1 | Open | | | Create `github/pci-dss/src/content/config.ts` |
-| F.2 | Open | | | Create controls collection (`github/pci-dss/src/content/controls/`) — 12 files |
-| F.3 | Open | | | Create advisory collection (`github/pci-dss/src/content/advisory/`) — 7 files |
-| F.4 | Open | | | Create services collection (`github/pci-dss/src/content/services/`) — 4 files |
-| F.5 | Open | | | Create tools collection (`github/pci-dss/src/content/tools/`) — 15 files |
+| F.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/pci-dss/src/content/config.ts` |
+| F.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/pci-dss/src/content/controls/`) — 12 files |
+| F.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/pci-dss/src/content/advisory/`) — 7 files |
+| F.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/pci-dss/src/content/services/`) — 4 files |
+| F.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/pci-dss/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-F Context — PCI DSS Control Domains</summary>
@@ -313,11 +313,11 @@ PCI DSS has 12 principal requirements. Each maps directly to one control file:
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| G.1 | Open | | | Create `github/ny-shield/src/content/config.ts` |
-| G.2 | Open | | | Create controls collection (`github/ny-shield/src/content/controls/`) — 8 files |
-| G.3 | Open | | | Create advisory collection (`github/ny-shield/src/content/advisory/`) — 7 files |
-| G.4 | Open | | | Create services collection (`github/ny-shield/src/content/services/`) — 4 files |
-| G.5 | Open | | | Create tools collection (`github/ny-shield/src/content/tools/`) — 15 files |
+| G.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/ny-shield/src/content/config.ts` |
+| G.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/ny-shield/src/content/controls/`) — 8 files |
+| G.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/ny-shield/src/content/advisory/`) — 7 files |
+| G.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/ny-shield/src/content/services/`) — 4 files |
+| G.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/ny-shield/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-G Context — NY SHIELD Control Domains</summary>
@@ -349,11 +349,11 @@ PCI DSS has 12 principal requirements. Each maps directly to one control file:
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| H.1 | Open | | | Create `github/state-privacy/src/content/config.ts` |
-| H.2 | Open | | | Create controls collection (`github/state-privacy/src/content/controls/`) — 9 files |
-| H.3 | Open | | | Create advisory collection (`github/state-privacy/src/content/advisory/`) — 7 files |
-| H.4 | Open | | | Create services collection (`github/state-privacy/src/content/services/`) — 4 files |
-| H.5 | Open | | | Create tools collection (`github/state-privacy/src/content/tools/`) — 15 files |
+| H.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/state-privacy/src/content/config.ts` |
+| H.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/state-privacy/src/content/controls/`) — 9 files |
+| H.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/state-privacy/src/content/advisory/`) — 7 files |
+| H.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/state-privacy/src/content/services/`) — 4 files |
+| H.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/state-privacy/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-H Context — State Privacy Control Domains</summary>
@@ -388,11 +388,11 @@ PCI DSS has 12 principal requirements. Each maps directly to one control file:
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| I.1 | Open | | | Create `github/sec-cyber/src/content/config.ts` |
-| I.2 | Open | | | Create controls collection (`github/sec-cyber/src/content/controls/`) — 8 files |
-| I.3 | Open | | | Create advisory collection (`github/sec-cyber/src/content/advisory/`) — 7 files |
-| I.4 | Open | | | Create services collection (`github/sec-cyber/src/content/services/`) — 4 files |
-| I.5 | Open | | | Create tools collection (`github/sec-cyber/src/content/tools/`) — 15 files |
+| I.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/sec-cyber/src/content/config.ts` |
+| I.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/sec-cyber/src/content/controls/`) — 8 files |
+| I.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/sec-cyber/src/content/advisory/`) — 7 files |
+| I.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/sec-cyber/src/content/services/`) — 4 files |
+| I.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/sec-cyber/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-I Context — SEC Cybersecurity Control Domains</summary>
@@ -424,11 +424,11 @@ PCI DSS has 12 principal requirements. Each maps directly to one control file:
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| J.1 | Open | | | Create `github/ai-governance/src/content/config.ts` |
-| J.2 | Open | | | Create controls collection (`github/ai-governance/src/content/controls/`) — 10 files |
-| J.3 | Open | | | Create advisory collection (`github/ai-governance/src/content/advisory/`) — 7 files |
-| J.4 | Open | | | Create services collection (`github/ai-governance/src/content/services/`) — 4 files |
-| J.5 | Open | | | Create tools collection (`github/ai-governance/src/content/tools/`) — 15 files |
+| J.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/ai-governance/src/content/config.ts` |
+| J.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/ai-governance/src/content/controls/`) — 10 files |
+| J.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/ai-governance/src/content/advisory/`) — 7 files |
+| J.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/ai-governance/src/content/services/`) — 4 files |
+| J.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/ai-governance/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-J Context — AI Governance Control Domains</summary>
@@ -464,11 +464,11 @@ PCI DSS has 12 principal requirements. Each maps directly to one control file:
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| K.1 | Open | | | Create `github/eu-dora/src/content/config.ts` |
-| K.2 | Open | | | Create controls collection (`github/eu-dora/src/content/controls/`) — 9 files |
-| K.3 | Open | | | Create advisory collection (`github/eu-dora/src/content/advisory/`) — 7 files |
-| K.4 | Open | | | Create services collection (`github/eu-dora/src/content/services/`) — 4 files |
-| K.5 | Open | | | Create tools collection (`github/eu-dora/src/content/tools/`) — 15 files |
+| K.1 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create `github/eu-dora/src/content/config.ts` |
+| K.2 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create controls collection (`github/eu-dora/src/content/controls/`) — 9 files |
+| K.3 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create advisory collection (`github/eu-dora/src/content/advisory/`) — 7 files |
+| K.4 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create services collection (`github/eu-dora/src/content/services/`) — 4 files |
+| K.5 | Completed | 2026-05-23 08:15 PM | 2026-05-23 09:00 PM | Create tools collection (`github/eu-dora/src/content/tools/`) — 15 files |
 
 <details>
 <summary>Phase 011-K Context — EU DORA Control Domains</summary>
