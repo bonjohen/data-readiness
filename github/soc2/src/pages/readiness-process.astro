@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import TimelineDiagram from '../components/TimelineDiagram.astro';
+---
+
+<BaseLayout title="Readiness Process" description="Step-by-step SOC 2 readiness process, sprint timeline, and deliverables for technology companies.">
+  <section class="content">
+    <h1>Readiness Process</h1>
+
+    <p>The readiness sprint is a focused 2&ndash;4 week engagement that produces everything you need to pursue a SOC 2 audit with confidence: a defined scope, a control baseline, an evidence plan, and a clear remediation roadmap.</p>
+
+    <div class="section">
+      <h2>Sprint Timeline</h2>
+      <p>The engagement follows four phases, each building on the outputs of the previous one.</p>
+      <TimelineDiagram />
+    </div>
+
+    <div class="section">
+      <h2>Phase Details</h2>
+
+      <div class="phase-detail">
+        <h3>1. Intake <span class="phase-duration">2&ndash;6 days</span></h3>
+        <p>We start by understanding your business, systems, and compliance context.</p>
+        <ul>
+          <li><strong>NDA and stakeholder mapping</strong> &mdash; identify the people who own systems, data, and processes</li>
+          <li><strong>Document request</strong> &mdash; collect existing policies, architecture diagrams, vendor lists, and prior audit reports</li>
+          <li><strong>Scoping interviews</strong> &mdash; understand your products, infrastructure, data flows, and customer commitments</li>
+          <li><strong>System boundary draft</strong> &mdash; define the initial scope of the audit based on what we learn</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>2. Assessment <span class="phase-duration">9 days</span></h3>
+        <p>We evaluate your current control posture against the selected Trust Services Criteria.</p>
+        <ul>
+          <li><strong>TSC selection</strong> &mdash; recommend which criteria to include based on your business model and buyer expectations</li>
+          <li><strong>Type 1 vs. Type 2 recommendation</strong> &mdash; determine the right report type for your timeline and goals</li>
+          <li><strong>Control walkthroughs</strong> &mdash; review existing controls across all 12 domains (access, change management, logging, etc.)</li>
+          <li><strong>Evidence sampling</strong> &mdash; assess what evidence you can already produce and identify gaps in your evidence repository</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>3. Outputs <span class="phase-duration">9 days</span></h3>
+        <p>We deliver the artifacts that define your path to audit readiness.</p>
+        <ul>
+          <li><strong>Controls matrix and gap register</strong> &mdash; every control mapped to criteria, with gaps ranked by risk</li>
+          <li><strong>Policy and document backlog</strong> &mdash; list of policies to write or update, prioritized by audit impact</li>
+          <li><strong>Evidence calendar</strong> &mdash; what to collect, who collects it, and how often</li>
+          <li><strong>Executive readout and remediation roadmap</strong> &mdash; board-ready summary with a prioritized plan to close gaps</li>
+        </ul>
+      </div>
+
+      <div class="phase-detail">
+        <h3>4. Follow-on <span class="phase-duration">Variable</span></h3>
+        <p>After the readiness sprint, the path forward depends on the gaps identified.</p>
+        <ul>
+          <li><strong>Remediation implementation</strong> &mdash; close gaps with our support (typically 1&ndash;4 months depending on maturity)</li>
+          <li><strong>Type 2 observation period</strong> &mdash; if pursuing Type 2, operate controls for 3&ndash;12 months while collecting evidence</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Sprint Deliverables</h2>
+      <p>Every readiness sprint produces these minimum deliverables:</p>
+      <div class="deliverables-grid">
+        <div class="deliverable-item">Scoped system boundary</div>
+        <div class="deliverable-item">TSC recommendation</div>
+        <div class="deliverable-item">Type 1 vs. Type 2 recommendation</div>
+        <div class="deliverable-item">Control inventory mapped to criteria</div>
+        <div class="deliverable-item">Gap analysis with risk ranking</div>
+        <div class="deliverable-item">Evidence collection plan</div>
+        <div class="deliverable-item">Policy backlog</div>
+        <div class="deliverable-item">Executive readout</div>
+      </div>
+    </div>
+
+    <div class="section cta-section">
+      <h2>Start Your Readiness Sprint</h2>
+      <p>Most companies complete the readiness sprint in 2&ndash;4 weeks. The result is a clear, actionable plan to get audit-ready.</p>
+      <a href="/about" class="cta-button">Get in Touch</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .phase-detail {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .phase-detail h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .phase-duration {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.125rem 0.5rem;
+  }
+
+  .phase-detail ul {
+    margin-bottom: 0;
+  }
+
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .deliverable-item {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: var(--color-heading);
+  }
+
+  .deliverable-item::before {
+    content: '\2713';
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+    font-weight: 700;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+  }
+
+  .cta-section p {
+    max-width: 36rem;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .deliverables-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

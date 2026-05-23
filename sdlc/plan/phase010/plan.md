@@ -242,17 +242,17 @@ const phases = [
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| D.1 | Open | | | Create `github/soc2/src/pages/index.astro` — hero section, "Why SOC 2 Matters" value grid, "How We Help" service overview cards, CTA section (from reference `c:\projects\soc2\src\pages\index.astro`) |
-| D.2 | Open | | | Create `github/soc2/src/pages/what-is-soc2.astro` — framework definitions, scope, TSC table, Type 1 vs 2 table, readiness checklist (from reference) |
-| D.3 | Open | | | Create `github/soc2/src/pages/readiness-process.astro` — TimelineDiagram, RACI context, deliverables breakdown (from reference) |
-| D.4 | Open | | | Create `github/soc2/src/pages/controls-evidence.astro` — `getCollection('controls')` sorted by order, mapped to ControlCard (from reference) |
-| D.5 | Open | | | Create `github/soc2/src/pages/ai-data.astro` — `getCollection('advisory')` sorted by order, mapped to AdvisoryCard (from reference) |
-| D.6 | Open | | | Create `github/soc2/src/pages/services.astro` — `getCollection('services')` sorted by order, mapped to ServiceCard, DisclaimerBanner, RACI table (from reference) |
-| D.7 | Open | | | Create `github/soc2/src/pages/tools.astro` — `getCollection('tools')` filtered by category (compliance/operational), mapped to ToolCard (from reference) |
-| D.8 | Open | | | Create `github/soc2/src/pages/about.astro` — company info, staffing, approach, launch metrics, DisclaimerBanner (from reference) |
-| D.9 | Open | | | Create `github/soc2/src/pages/404.astro` — error heading, message, home link (from reference) |
-| D.10 | Open | | | Verify: `npx astro build` in `github/soc2/` succeeds — 9 pages built, sitemap generated, zero errors |
-| D.11 | Open | | | Verify: `npx astro dev --port 4333` serves all pages; nav links work; content collections render; hamburger toggles at mobile widths |
+| D.1 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:40 PM | Create `github/soc2/src/pages/index.astro` — hero section, "Why SOC 2 Matters" value grid, "How We Help" service overview cards, CTA section (from reference `c:\projects\soc2\src\pages\index.astro`) |
+| D.2 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:40 PM | Create `github/soc2/src/pages/what-is-soc2.astro` — framework definitions, scope, TSC table, Type 1 vs 2 table, readiness checklist (from reference) |
+| D.3 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:40 PM | Create `github/soc2/src/pages/readiness-process.astro` — TimelineDiagram, RACI context, deliverables breakdown (from reference) |
+| D.4 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:40 PM | Create `github/soc2/src/pages/controls-evidence.astro` — `getCollection('controls')` sorted by order, mapped to ControlCard (from reference) |
+| D.5 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:40 PM | Create `github/soc2/src/pages/ai-data.astro` — `getCollection('advisory')` sorted by order, mapped to AdvisoryCard (from reference) |
+| D.6 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:40 PM | Create `github/soc2/src/pages/services.astro` — `getCollection('services')` sorted by order, mapped to ServiceCard, DisclaimerBanner, RACI table (from reference) |
+| D.7 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:40 PM | Create `github/soc2/src/pages/tools.astro` — `getCollection('tools')` filtered by category (compliance/operational), mapped to ToolCard (from reference) |
+| D.8 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:40 PM | Create `github/soc2/src/pages/about.astro` — company info, staffing, approach, launch metrics, DisclaimerBanner (from reference) |
+| D.9 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:40 PM | Create `github/soc2/src/pages/404.astro` — error heading, message, home link (from reference) |
+| D.10 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:41 PM | Verify: `npx astro build` in `github/soc2/` succeeds — 9 pages built, sitemap generated, zero errors |
+| D.11 | Completed | 2026-05-23 07:40 PM | 2026-05-23 07:41 PM | Verify: `npx astro dev --port 4333` serves all pages; nav links work; content collections render; hamburger toggles at mobile widths |
 
 <details>
 <summary>Phase 010-D Context</summary>
@@ -301,10 +301,8 @@ dist/
 
 ### Phase 010-D Summary
 
-_To be filled after completion._
-
-- **Changes:** TBD
-- **Commit:** TBD
+- **Changes:** Copied all 9 pages from reference project: index (hero + value grid + service cards + CTA), what-is-soc2 (framework definitions, TSC table, Type 1 vs 2), readiness-process (TimelineDiagram), controls-evidence (12 ControlCards from collection), ai-data (7 AdvisoryCards), services (4 ServiceCards + RACI + disclaimers), tools (15 ToolCards filtered by category), about, 404. Build verified — 9 pages + sitemap in 920ms.
+- **Commit:** `Phase 010-D: SOC 2 pages — 9 pages with content collection rendering`
 
 ---
 
