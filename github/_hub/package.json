@@ -1,0 +1,14 @@
+{
+  "name": "data-readiness-hub",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --port 4339",
+    "build": "astro build",
+    "preview": "astro preview --port 4339"
+  },
+  "dependencies": {
+    "astro": "^5.8.0",
+    "@astrojs/sitemap": "^3.7.2",
+    "sharp": "^0.33.5"
+  }
+}

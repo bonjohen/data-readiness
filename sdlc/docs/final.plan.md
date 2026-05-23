@@ -56,20 +56,18 @@ Open  ──>  Started  ──>  Completed
 
 | No | Status | Started (PST) | Completed (PST) | Description |
 |----|--------|---------------|------------------|-------------|
-| 00.1 | Open | | | Create `github/_hub/package.json` with name `data-readiness-hub`, type `module`, scripts (dev port 4339, build, preview), dependencies (astro ^5.8.0, @astrojs/sitemap ^3.7.2, sharp ^0.33.5) |
-| 00.2 | Open | | | Create `github/_hub/astro.config.mjs` — site URL, port 4339, sitemap integration |
-| 00.3 | Open | | | Create `github/_hub/tsconfig.json` — extends `astro/tsconfigs/strict` |
-| 00.4 | Open | | | Create `github/_hub/src/config.ts` — SITE constant with title, description, url, author |
-| 00.5 | Open | | | Create `github/_hub/src/styles/global.css` — copy SOC 2 design tokens, add `.badge-live` and `.badge-coming-soon` styles per PDR §7.1 |
-| 00.6 | Open | | | Create `github/_hub/public/favicon.svg` and `github/_hub/public/CNAME` |
-| 00.7 | Open | | | Run `npm install` and verify `npx astro build` succeeds (empty project, no pages yet — just confirm toolchain works) |
+| 00.1 | Completed | 2026-05-23 12:00 PM | 2026-05-23 12:02 PM | Create `github/_hub/package.json` with name `data-readiness-hub`, type `module`, scripts (dev port 4339, build, preview), dependencies (astro ^5.8.0, @astrojs/sitemap ^3.7.2, sharp ^0.33.5) |
+| 00.2 | Completed | 2026-05-23 12:02 PM | 2026-05-23 12:03 PM | Create `github/_hub/astro.config.mjs` — site URL, port 4339, sitemap integration |
+| 00.3 | Completed | 2026-05-23 12:02 PM | 2026-05-23 12:03 PM | Create `github/_hub/tsconfig.json` — extends `astro/tsconfigs/strict` |
+| 00.4 | Completed | 2026-05-23 12:02 PM | 2026-05-23 12:03 PM | Create `github/_hub/src/config.ts` — SITE constant with title, description, url, author |
+| 00.5 | Completed | 2026-05-23 12:03 PM | 2026-05-23 12:05 PM | Create `github/_hub/src/styles/global.css` — copy SOC 2 design tokens, add `.badge-live` and `.badge-coming-soon` styles per PDR §7.1 |
+| 00.6 | Completed | 2026-05-23 12:02 PM | 2026-05-23 12:03 PM | Create `github/_hub/public/favicon.svg` and `github/_hub/public/CNAME` |
+| 00.7 | Completed | 2026-05-23 12:05 PM | 2026-05-23 12:07 PM | Run `npm install` and verify `npx astro build` succeeds (empty project, no pages yet — just confirm toolchain works) |
 
 ### Phase 00 Summary
 
-_To be filled after completion._
-
-- **Changes:** TBD
-- **Commit:** TBD
+- **Changes:** Created `github/_hub/` Astro project scaffold with `package.json`, `astro.config.mjs` (port 4339, sitemap), `tsconfig.json` (strict), `src/config.ts` (SITE constant), `src/styles/global.css` (SOC 2 design tokens + `.badge-live`, `.badge-coming-soon`, `.badge` styles), `public/favicon.svg`, `public/CNAME`. Installed 296 npm packages. Verified `npx astro build` succeeds.
+- **Commit:** `Phase 00: Project Scaffold & Design System — Astro hub site with shared design tokens`
 
 ## Phase 01: Core Components
 
