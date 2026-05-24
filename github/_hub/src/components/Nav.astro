@@ -41,6 +41,9 @@ const brandLabel = topic ? topic.name : SITE.title;
       {!topic && (
         <li><a href="/" aria-current={isCurrent('/')}>Home</a></li>
       )}
+      {topic && (
+        <li><a href="/" class="nav-hub-link">All Regulations</a></li>
+      )}
       {pages.map((p) => (
         <li><a href={p.href} aria-current={isCurrent(p.href)}>{p.label}</a></li>
       ))}

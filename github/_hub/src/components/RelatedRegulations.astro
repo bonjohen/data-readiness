@@ -1,0 +1,25 @@
+---
+import { getRelationships } from '../data/topic-relationships';
+
+interface Props {
+  topicId: string;
+}
+
+const { topicId } = Astro.props;
+const related = getRelationships(topicId);
+---
+
+{related.length > 0 && (
+  <section class="content section related-section">
+    <h2>Related Regulations</h2>
+    <p>Compliance efforts rarely exist in isolation. These frameworks share overlapping controls, evidence requirements, or regulatory intent with this topic:</p>
+    <div class="related-grid">
+      {related.map((r) => (
+        <a href={`/${r.topicId}/`} class="card related-card">
+          <h3>{r.label}</h3>
+          <p>{r.reason}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

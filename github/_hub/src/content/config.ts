@@ -47,6 +47,13 @@ const pageSchema = z.object({
     activities: z.array(z.string()),
   })).optional(),
   disclaimers: z.array(z.string()).optional(),
+  services: z.array(z.object({
+    name: z.string(),
+    tagline: z.string(),
+  })).optional(),
+  servicesIntro: z.string().optional(),
+  ctaHeadline: z.string().optional(),
+  ctaBody: z.string().optional(),
 });
 
 export const collections = {

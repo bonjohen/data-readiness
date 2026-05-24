@@ -365,6 +365,46 @@ th {
   }
 }
 
+/* ── Related Regulations ── */
+.related-section p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.related-card {
+  text-decoration: none;
+  display: block;
+}
+
+.related-card h3 {
+  color: var(--color-heading);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.related-card p {
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.related-card:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Responsive ── */
 @media (max-width: 480px) {
   :root {

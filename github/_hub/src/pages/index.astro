@@ -15,6 +15,21 @@ const topics = discoverTopics();
   />
   <section class="container" id="topics">
     <h2>Regulation Topics</h2>
+    <p class="section-intro">Technology companies face a growing web of data regulations — from consumer privacy and healthcare security to financial governance and AI accountability. Each framework has its own control requirements, evidence expectations, and audit patterns. We break them into three categories:</p>
+    <div class="category-explainer">
+      <div class="category-item">
+        <h3>Privacy</h3>
+        <p>Laws that govern how you collect, use, share, and delete personal data. These regulations give individuals rights over their information and impose obligations on data controllers and processors.</p>
+      </div>
+      <div class="category-item">
+        <h3>Security</h3>
+        <p>Frameworks that mandate technical and administrative safeguards to protect sensitive data — payment cards, health records, financial information — from unauthorized access and breach.</p>
+      </div>
+      <div class="category-item">
+        <h3>Governance</h3>
+        <p>Rules that require organizations to document risk management processes, maintain oversight structures, and disclose material incidents to regulators and stakeholders.</p>
+      </div>
+    </div>
     <div class="topic-grid">
       {topics.map((topic) => <TopicCard {...topic} />)}
     </div>
@@ -54,7 +69,41 @@ const topics = discoverTopics();
 
   #topics h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 2rem;
+    color: var(--color-text-muted);
+  }
+
+  .category-explainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .category-item {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+  }
+
+  .category-item h3 {
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .category-item p {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    line-height: 1.5;
   }
 
   .topic-grid {
@@ -104,6 +153,10 @@ const topics = discoverTopics();
   }
 
   @media (max-width: 768px) {
+    .category-explainer {
+      grid-template-columns: 1fr;
+    }
+
     .topic-grid {
       grid-template-columns: repeat(2, 1fr);
     }
