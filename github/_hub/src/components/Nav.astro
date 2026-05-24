@@ -1,5 +1,4 @@
 ---
-import { SITE } from '../config';
 import type { TopicManifest } from '../data/topic-schema';
 
 interface Props {
@@ -27,12 +26,16 @@ function isCurrent(href: string): 'page' | undefined {
   return norm === normHref ? 'page' : undefined;
 }
 
-const brandHref = topic ? `/${topic.id}/` : '/';
-const brandLabel = topic ? topic.name : SITE.title;
 ---
 <nav>
   <div class="nav-container">
-    <a href={brandHref} class="nav-brand">{brandLabel}</a>
+    <div class="nav-brand-group">
+      <a href="/" class="nav-brand">Data Readiness</a>
+      {topic && (
+        <span class="nav-separator">/</span>
+        <a href={`/${topic.id}/`} class="nav-topic">{topic.name}</a>
+      )}
+    </div>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
       <span></span>
@@ -40,9 +43,6 @@ const brandLabel = topic ? topic.name : SITE.title;
     <ul class="nav-links">
       {!topic && (
         <li><a href="/" aria-current={isCurrent('/')}>Home</a></li>
-      )}
-      {topic && (
-        <li><a href="/" class="nav-hub-link">All Regulations</a></li>
       )}
       {pages.map((p) => (
         <li><a href={p.href} aria-current={isCurrent(p.href)}>{p.label}</a></li>
@@ -70,14 +70,41 @@ const brandLabel = topic ? topic.name : SITE.title;
     height: 3.5rem;
   }
 
+  .nav-brand-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
   .nav-brand {
     font-size: var(--font-size-lg);
     font-weight: 700;
     color: var(--color-heading);
     text-decoration: none;
+    white-space: nowrap;
   }
 
   .nav-brand:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .nav-separator {
+    color: var(--color-text-muted);
+    font-weight: 300;
+  }
+
+  .nav-topic {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-topic:hover {
     color: var(--color-accent);
     text-decoration: none;
   }
