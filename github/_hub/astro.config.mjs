@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://datareadiness.johnboen.com',
+  site: 'https://data-readiness.johnboen.com',
   integrations: [mdx(), sitemap()],
   server: { port: 4339 },
 });
