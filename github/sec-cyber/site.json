@@ -6,5 +6,6 @@
   "status": "live",
   "order": 9,
   "category": "governance",
-  "url": "https://sec-cyber.johnboen.com"
+  "whatIsLabel": "What is SEC Cyber Disclosure?",
+  "whatIsSlug": "what-is-sec-cyber"
 }

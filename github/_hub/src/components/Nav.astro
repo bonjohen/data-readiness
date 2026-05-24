@@ -1,17 +1,49 @@
 ---
 import { SITE } from '../config';
+import type { TopicManifest } from '../data/topic-schema';
+
+interface Props {
+  topic?: TopicManifest;
+}
+
+const { topic } = Astro.props;
 const pathname = Astro.url.pathname;
+
+const pages = topic ? [
+  { href: `/${topic.id}/${topic.whatIsSlug}`, label: topic.whatIsLabel },
+  { href: `/${topic.id}/readiness-process`, label: 'Process' },
+  { href: `/${topic.id}/controls-evidence`, label: 'Controls' },
+  { href: `/${topic.id}/ai-data`, label: 'AI & Data' },
+  { href: `/${topic.id}/services`, label: 'Services' },
+  { href: `/${topic.id}/tools`, label: 'Tools' },
+  { href: `/${topic.id}/about`, label: 'About' },
+] : [
+  { href: '/about', label: 'About' },
+];
+
+function isCurrent(href: string): 'page' | undefined {
+  const norm = pathname.replace(/\/$/, '') || '/';
+  const normHref = href.replace(/\/$/, '') || '/';
+  return norm === normHref ? 'page' : undefined;
+}
+
+const brandHref = topic ? `/${topic.id}/` : '/';
+const brandLabel = topic ? topic.name : SITE.title;
 ---
 <nav>
   <div class="nav-container">
-    <a href="/" class="nav-brand">{SITE.title}</a>
+    <a href={brandHref} class="nav-brand">{brandLabel}</a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
       <span></span>
     </label>
     <ul class="nav-links">
-      <li><a href="/" aria-current={pathname === '/' ? 'page' : undefined}>Home</a></li>
-      <li><a href="/about" aria-current={pathname === '/about' || pathname === '/about/' ? 'page' : undefined}>About</a></li>
+      {!topic && (
+        <li><a href="/" aria-current={isCurrent('/')}>Home</a></li>
+      )}
+      {pages.map((p) => (
+        <li><a href={p.href} aria-current={isCurrent(p.href)}>{p.label}</a></li>
+      ))}
     </ul>
   </div>
 </nav>

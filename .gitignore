@@ -16,12 +16,15 @@ dist/
 Thumbs.db
 Desktop.ini
 .DS_Store
+ehthumbs.db
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+*.sublime-workspace
+*.sublime-project
 
 # Logs
 *.log

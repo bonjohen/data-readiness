@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../components/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { discoverTopics } from '../../data/discover-topics';
+
+export function getStaticPaths() {
+  const topics = discoverTopics();
+  return topics.map((t) => ({
+    params: { topic: t.id, whatIs: t.whatIsSlug },
+    props: { topic: t },
+  }));
+}
+
+const { topic } = Astro.props;
+const pages = await getCollection('pages');
+const entry = pages.find((p) => p.id === `${topic.id}/what-is.mdx`);
+if (!entry) throw new Error(`No what-is page found for topic ${topic.id}`);
+const { Content } = await entry.render();
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.description} topic={topic}>
+  <section class="content">
+    <Content />
+  </section>
+</BaseLayout>
+
+<style>
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .checklist {
+    padding-left: 1.5rem;
+  }
+
+  .checklist li {
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .checklist li::marker {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+</style>

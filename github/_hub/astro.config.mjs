@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   site: 'https://datareadiness.johnboen.com',
-  integrations: [sitemap()],
+  integrations: [mdx(), sitemap()],
   server: { port: 4339 },
 });

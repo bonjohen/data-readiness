@@ -6,5 +6,6 @@
   "status": "live",
   "order": 1,
   "category": "privacy",
-  "url": "https://cppa.johnboen.com"
+  "whatIsLabel": "What is CCPA?",
+  "whatIsSlug": "what-is-ccpa"
 }

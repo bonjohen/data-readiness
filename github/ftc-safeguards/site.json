@@ -6,5 +6,6 @@
   "status": "live",
   "order": 4,
   "category": "security",
-  "url": "https://ftc-safeguards.johnboen.com"
+  "whatIsLabel": "What is the Safeguards Rule?",
+  "whatIsSlug": "what-is-safeguards-rule"
 }

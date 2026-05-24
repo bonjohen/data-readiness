@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../components/BaseLayout.astro';
+import ToolCard from '../../components/ToolCard.astro';
+import { getCollection } from 'astro:content';
+import { discoverTopics } from '../../data/discover-topics';
+
+export function getStaticPaths() {
+  const topics = discoverTopics();
+  return topics.map((t) => ({ params: { topic: t.id }, props: { topic: t } }));
+}
+
+const { topic } = Astro.props;
+const allTools = (await getCollection('tools'))
+  .filter((t) => t.id.startsWith(topic.id + '/'));
+const complianceTools = allTools.filter((t) => t.data.category === 'compliance');
+const operationalTools = allTools.filter((t) => t.data.category === 'operational');
+---
+
+<BaseLayout title="Tools Landscape" description={`Compliance automation platforms and operational systems evaluated for ${topic.regulation} readiness.`} topic={topic}>
+  <section class="content">
+    <h1>Tools Landscape</h1>
+
+    <p>The right tooling accelerates {topic.regulation} readiness, but no tool replaces scope clarity, control ownership, and evidence discipline. Below is an evaluation of compliance automation platforms and operational systems commonly used as evidence sources.</p>
+
+    <div class="callout">
+      <p><strong>Tool-agnostic by design.</strong> Our readiness service works with any combination of these tools or with fully manual workflows. The best tool is the one your team will actually use consistently.</p>
+    </div>
+
+    <div class="section">
+      <h2>Compliance Automation Platforms</h2>
+      <p>Purpose-built platforms that centralize evidence collection, policy management, and audit workflows. These are optional but can significantly reduce manual effort.</p>
+
+      <div class="tool-grid">
+        {complianceTools.map((tool) => (
+          <ToolCard
+            name={tool.data.name}
+            category={tool.data.category}
+            good_fit={tool.data.good_fit}
+            cautions={tool.data.cautions}
+          />
+        ))}
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Operational Systems as Evidence Sources</h2>
+      <p>Your existing infrastructure, identity, and collaboration tools are often the primary sources of audit evidence. The key is knowing what to extract and how to organize it.</p>
+
+      <div class="tool-grid">
+        {operationalTools.map((tool) => (
+          <ToolCard
+            name={tool.data.name}
+            category={tool.data.category}
+            good_fit={tool.data.good_fit}
+            cautions={tool.data.cautions}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .tool-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

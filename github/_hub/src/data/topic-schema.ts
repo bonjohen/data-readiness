@@ -10,9 +10,8 @@ export const topicManifestSchema = z.object({
   order: z.number().int().min(1).max(99),
   category: z.string().min(1),
   icon: z.string().optional(),
-}).refine(
-  (data) => data.status !== 'live' || (data.url !== undefined && data.url !== ''),
-  { message: 'url is required when status is "live"', path: ['url'] }
-);
+  whatIsLabel: z.string().min(1),
+  whatIsSlug: z.string().min(1),
+});
 
 export type TopicManifest = z.infer<typeof topicManifestSchema>;

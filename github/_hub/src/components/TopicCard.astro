@@ -11,11 +11,11 @@ interface Props {
   icon?: string;
 }
 
-const { name, shortDescription, status, url, category } = Astro.props;
+const { id, name, shortDescription, status, category } = Astro.props;
 const isLive = status === 'live';
 ---
-{isLive && url ? (
-  <a href={url} class="topic-card-link">
+{isLive ? (
+  <a href={`/${id}/`} class="topic-card-link">
     <article class="card topic-card topic-card-live">
       <div class="topic-card-badges">
         <span class="badge">{category}</span>

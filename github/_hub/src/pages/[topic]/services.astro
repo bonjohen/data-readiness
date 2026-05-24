@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../components/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import DisclaimerBanner from '../../components/DisclaimerBanner.astro';
+import { getCollection } from 'astro:content';
+import { discoverTopics } from '../../data/discover-topics';
+
+export function getStaticPaths() {
+  const topics = discoverTopics();
+  return topics.map((t) => ({ params: { topic: t.id }, props: { topic: t } }));
+}
+
+const { topic } = Astro.props;
+const services = (await getCollection('services'))
+  .filter((e) => e.id.startsWith(topic.id + '/'))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const disclaimers = [
+  `We provide ${topic.regulation} readiness, remediation, evidence preparation, and support. We do not issue compliance reports or provide attestations.`,
+  "Any formal examination must be performed by an independent licensed firm where applicable.",
+  "Management remains responsible for defining scope, operating controls, and making management assertions.",
+  "We coordinate with auditors and reviewers, but we do not act as the auditor and do not guarantee outcomes.",
+  "Where privacy, employment, or customer-contract issues arise, legal counsel may be required in addition to readiness support.",
+];
+---
+
+<BaseLayout title="Services & Pricing" description={`${topic.regulation} readiness service packages with pricing, deliverables, and engagement model.`} topic={topic}>
+  <section class="content">
+    <h1>Services & Pricing</h1>
+
+    <p>Service packages designed to meet you where you are in your compliance journey. Each can be engaged independently or combined for end-to-end readiness support. See <a href={`/${topic.id}/readiness-process`}>our methodology</a> for how the readiness process works.</p>
+
+    <div class="service-grid">
+      {services.map((service) => (
+        <ServiceCard
+          name={service.data.name}
+          duration={service.data.duration}
+          price_range={service.data.price_range}
+          deliverables={service.data.deliverables}
+          ctaHref={`/${topic.id}/about`}
+        />
+      ))}
+    </div>
+
+    <div class="section">
+      <h2>Who Does What: RACI Matrix</h2>
+      <p>A clear engagement model ensures that responsibilities are understood from day one. The matrix below shows who is Responsible (R), Accountable (A), Consulted (C), and Informed (I) for each workstream.</p>
+
+      <div class="table-wrapper">
+        <table class="raci-table">
+          <thead>
+            <tr>
+              <th>Workstream</th>
+              <th>Founder / CEO</th>
+              <th>CTO / VP Eng</th>
+              <th>Security / Compliance</th>
+              <th>Ops / COO</th>
+              <th>HR</th>
+              <th>Eng / SRE</th>
+              <th>Reviewer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Approve scope and goals</td>
+              <td><span class="raci-a">A</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-r">R</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-i">I</span></td>
+              <td><span class="raci-i">I</span></td>
+              <td><span class="raci-i">I</span></td>
+            </tr>
+            <tr>
+              <td>Control design and mapping</td>
+              <td><span class="raci-i">I</span></td>
+              <td><span class="raci-a">A</span></td>
+              <td><span class="raci-r">R</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-r">R</span></td>
+              <td><span class="raci-c">C</span></td>
+            </tr>
+            <tr>
+              <td>Policy adoption</td>
+              <td><span class="raci-a">A</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-r">R</span></td>
+              <td><span class="raci-r">R</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-i">I</span></td>
+              <td><span class="raci-i">I</span></td>
+            </tr>
+            <tr>
+              <td>Evidence collection</td>
+              <td><span class="raci-i">I</span></td>
+              <td><span class="raci-a">A</span></td>
+              <td><span class="raci-r">R</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-r">R</span></td>
+              <td><span class="raci-i">I</span></td>
+            </tr>
+            <tr>
+              <td>Vendor management evidence</td>
+              <td><span class="raci-i">I</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-r">R</span></td>
+              <td><span class="raci-a">A</span></td>
+              <td><span class="raci-i">I</span></td>
+              <td><span class="raci-i">I</span></td>
+              <td><span class="raci-i">I</span></td>
+            </tr>
+            <tr>
+              <td>Review coordination</td>
+              <td><span class="raci-i">I</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-ar">A/R</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-c">C</span></td>
+              <td><span class="raci-r">R</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <DisclaimerBanner statements={disclaimers} />
+  </section>
+</BaseLayout>
+
+<style>
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .raci-table {
+    font-size: 0.85rem;
+    min-width: 700px;
+  }
+
+  .raci-table td:first-child {
+    font-weight: 600;
+    color: var(--color-heading);
+    min-width: 180px;
+    text-align: left;
+  }
+
+  .raci-table td {
+    text-align: center;
+  }
+
+  .raci-r, .raci-a, .raci-c, .raci-i, .raci-ar {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+
+  .raci-r {
+    background: var(--color-accent-strong);
+    color: #ffffff;
+  }
+
+  .raci-a {
+    background: #f59e0b;
+    color: #0f172a;
+  }
+
+  .raci-c {
+    background: var(--color-border);
+    color: var(--color-heading);
+  }
+
+  .raci-i {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+  }
+
+  .raci-ar {
+    background: linear-gradient(135deg, #f59e0b 50%, var(--color-accent-strong) 50%);
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

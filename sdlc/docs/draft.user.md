@@ -26,7 +26,7 @@ A compliance or security professional visits the top-level site, sees the full l
 ### 5.1 Repository and Folder Layout
 
 ```
-data-rediness/
+data-readiness/
   CLAUDE.md
   sdlc/                          # SDLC document pipeline (prompts, docs, plans)
   github/

@@ -6,5 +6,6 @@
   "status": "live",
   "order": 2,
   "category": "privacy",
-  "url": "https://gdpr.johnboen.com"
+  "whatIsLabel": "What is GDPR?",
+  "whatIsSlug": "what-is-gdpr"
 }

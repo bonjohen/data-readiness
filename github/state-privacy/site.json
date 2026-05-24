@@ -6,5 +6,6 @@
   "status": "live",
   "order": 8,
   "category": "privacy",
-  "url": "https://state-privacy.johnboen.com"
+  "whatIsLabel": "State Privacy Laws",
+  "whatIsSlug": "state-privacy-laws"
 }

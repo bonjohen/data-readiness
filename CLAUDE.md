@@ -8,7 +8,7 @@ Data Readiness is a multi-topic regulatory compliance readiness platform. It pro
 
 ## Current State
 
-The project is pre-implementation. The only artifact so far is the SDLC document pipeline (`sdlc/`) and an initial requirements sketch (`sdlc/docs/initial.md`). No application code, no git repo initialized yet.
+The hub site is implemented at `github/_hub/` as a single consolidated Astro 5 static site. It renders 111 pages: 3 hub-level pages (home, about, 404) and 9 pages per topic across 12 regulation topics. Content is organized in `src/content/` with 4 data collections (controls, advisory, services, tools) and a pages collection (MDX). Each topic's scaffolding has been removed — only `site.json` manifests remain in `github/{topic}/` directories. The hub runs on port 4339.
 
 ## SDLC Document Pipeline
 

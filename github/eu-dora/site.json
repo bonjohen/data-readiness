@@ -6,5 +6,6 @@
   "status": "live",
   "order": 11,
   "category": "governance",
-  "url": "https://eu-dora.johnboen.com"
+  "whatIsLabel": "What is DORA?",
+  "whatIsSlug": "what-is-dora"
 }

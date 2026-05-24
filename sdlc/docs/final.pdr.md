@@ -11,7 +11,7 @@ finalized_date: "2026-05-23"
 # Data Readiness Hub — Physical Design Requirements
 
 **Source document:** `sdlc/docs/final.user.md`
-**Project root:** `C:\Projects\data-rediness`
+**Project root:** `C:\Projects\data-readiness`
 **Date:** 2026-05-23
 
 ## 1. System Context

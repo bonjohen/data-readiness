@@ -6,5 +6,6 @@
   "status": "live",
   "order": 3,
   "category": "privacy",
-  "url": "https://coppa.johnboen.com"
+  "whatIsLabel": "What is COPPA?",
+  "whatIsSlug": "what-is-coppa"
 }

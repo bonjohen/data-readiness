@@ -3,7 +3,7 @@
 **Scope:** Top-level collector site (`github/_hub/`) only. Individual topic sites (SOC 2, CCPA, etc.) are out of scope for this document.
 
 **Source document:** `sdlc/docs/draft.user.md`
-**Project root:** `C:\Projects\data-rediness`
+**Project root:** `C:\Projects\data-readiness`
 **Date:** 2026-05-23
 
 ## 1. System Context
@@ -17,7 +17,7 @@
 | SOC 2 BaseLayout | `c:\projects\soc2\src\components\BaseLayout.astro` | Structural pattern for hub's BaseLayout (head/nav/main/footer wrapper) |
 | SOC 2 Nav | `c:\projects\soc2\src\components\Nav.astro` | Pattern for hub Nav (hamburger toggle, active state, sticky positioning) |
 | SOC 2 deploy workflow | `c:\projects\soc2\.github\workflows\deploy.yml` | Copy and adapt for hub deployment |
-| SDLC pipeline | `data-rediness/sdlc/` | Document pipeline for this and future spoke sites |
+| SDLC pipeline | `data-readiness/sdlc/` | Document pipeline for this and future spoke sites |
 
 ### 1.2 New Dependencies
 
